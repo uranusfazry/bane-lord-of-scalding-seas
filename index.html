@@ -162,65 +162,15 @@
 
         .flame-text {
             color: var(--flame-red);
-            text-shadow: 0 0 20px var(--ember-glow), 0 0 40px var(--flame-red);
+            /* text-shadow: 0 0 20px var(--ember-glow), 0 0 40px var(--flame-red); */
         }
 
         .gold-text {
             color: var(--gold);
-            text-shadow: 0 0 15px var(--bright-gold), 0 0 30px var(--gold);
+            /* text-shadow: 0 0 15px var(--bright-gold), 0 0 30px var(--gold); */
         }
 
-        .lava-text {
-            background: linear-gradient(135deg, var(--lava-orange), var(--flame-red), var(--gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Epic Glitch Effect */
-        .epic-glitch {
-            position: relative;
-            font-family: 'Cinzel', serif;
-            font-weight: 900;
-            letter-spacing: 0.08em;
-        }
-
-        .epic-glitch::before, .epic-glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.7;
-        }
-
-        .epic-glitch::before {
-            color: var(--lava-orange);
-            z-index: -1;
-            animation: flameGlitch1 3s infinite;
-        }
-
-        .epic-glitch::after {
-            color: var(--gold);
-            z-index: -2;
-            animation: flameGlitch2 2.5s infinite;
-        }
-
-        @keyframes flameGlitch1 {
-            0%, 100% { transform: translate(0); clip-path: inset(0 0 0 0); }
-            20% { transform: translate(-2px, 1px); clip-path: inset(20% 0 40% 0); }
-            40% { transform: translate(-1px, -2px); clip-path: inset(40% 0 20% 0); }
-            60% { transform: translate(2px, 1px); clip-path: inset(60% 0 10% 0); }
-            80% { transform: translate(1px, -1px); clip-path: inset(10% 0 30% 0); }
-        }
-
-        @keyframes flameGlitch2 {
-            0%, 100% { transform: translate(0); clip-path: inset(0 0 0 0); }
-            15% { transform: translate(-2px, 2px); clip-path: inset(70% 0 10% 0); }
-            30% { transform: translate(2px, -2px); clip-path: inset(15% 0 50% 0); }
-            45% { transform: translate(-1px, 2px); clip-path: inset(40% 0 20% 0); }
-        }
+        /* CSS untuk .lava-text, .epic-glitch, dan @keyframes flameGlitch1/2 telah dihapus dari sini */
 
         /* Navbar */
         .navbar {
@@ -233,7 +183,7 @@
         }
 
         .navbar .container > div {
-            height: 80px;
+            height: 70px;
             transition: height 0.3s ease;
         }
 
@@ -473,31 +423,12 @@
             border-radius: 50%;
             overflow: hidden;
             border: 4px solid var(--gold);
-            box-shadow: 0 0 40px var(--gold), 0 0 60px var(--lava-orange), inset 0 0 30px rgba(252, 191, 73, 0.3);
-            transition: all 0.4s ease;
-            position: relative;
+            /* box-shadow: 0 0 40px var(--gold), 0 0 60px var(--lava-orange), inset 0 0 30px rgba(252, 191, 73, 0.3); */
+            /* transition: all 0.4s ease; */
+            /* position: relative; */
         }
 
-        .profile::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: conic-gradient(from 0deg, var(--lava-orange), var(--gold), var(--flame-red), var(--lava-orange));
-            animation: orbitalFlame 5s linear infinite;
-            z-index: -1;
-        }
-
-        @keyframes orbitalFlame {
-            100% { transform: rotate(360deg); }
-        }
-
-        .profile:hover {
-            transform: scale(1.12);
-            box-shadow: 0 0 60px var(--gold), 0 0 100px var(--lava-orange);
-        }
+        /* CSS untuk .profile::before, @keyframes orbitalFlame, dan .profile:hover telah dihapus dari sini */
 
         .profile img, .profile video {
             width: 100%;
@@ -631,7 +562,7 @@
             background: rgba(27, 27, 27, 0.9);
             border-top: 2px solid rgba(252, 191, 73, 0.3);
             margin-top: auto;
-            height: 60px;
+            height: 70px;
             display: flex;
             flex-direction: column;
             align-items: center;
