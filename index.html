@@ -652,6 +652,19 @@
         }
 
         .hidden { display: none; }
+
+        /* --- [BARU] Fitur Light Mode --- */
+        /* Sesuai permintaan: Video tetap sama, gambar menjadi terang */
+        body.light-mode #bg-image {
+            /* Paksa override inline style (0.35) yang diatur JS saat video berakhir */
+            opacity: 1 !important; 
+            filter: saturate(1.15);
+        }
+        body.light-mode #bg-video {
+             /* Video tetap seperti semula */
+            opacity: 0.35;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
@@ -747,12 +760,14 @@
         <header style="text-align: center; margin-bottom: 3rem;">
             <!-- Profile -->
             <div class="profile">
-                <video src="https://i.imghippo.com/files/PBP5373k.jpg" alt="Bane Avatar" autoplay loop muted playsinline style="object-position: 50% 25%; will-change: transform;"></video>
+                <!-- DIUBAH: Mengganti tag <video> menjadi <img> untuk menampilkan gambar avatar -->
+                <img src="https://i.imghippo.com/files/PBP5373k.jpg" alt="Bane Avatar" style="object-position: 50% 25%; will-change: transform;">
+                <!-- AKHIR PERUBAHAN -->
             </div>
 
             <!-- Epic Title -->
             <div style="position: relative; display: inline-block; margin-bottom: 1.5rem;">
-                <h1 class="epic-glitch font-playfair gold-text" data-text="LORD OF SCALDING SEAS" style="font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem;">LORD OF SCALDING SEAS</h1>
+                <h1 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900; color: #fcbf49; margin-bottom: 1rem;">LORD OF SCALDING SEAS</h1>
             </div>
             <p class="font-cinzel flame-text" style="font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">MLBB Creator & Web Developer</p>
             <p style="max-width: 42rem; margin: 1.5rem auto 0; font-size: 1rem; line-height: 1.6; color: rgba(252, 191, 73, 0.8);">
@@ -782,7 +797,8 @@
     <!-- Add Portal Modal -->
     <div id="add-portal-modal" class="fixed inset-0 flex items-center justify-center z-50 hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 50;">
         <div class="modal-content" style="max-width: 28rem; width: 100%; margin: 0 1.5rem; position: relative; padding: 2rem;">
-            <button onclick="document.getElementById('add-portal-modal').classList.add('hidden')" style="position: absolute; top: 1rem; right: 1rem; font-size: 2rem; background: none; border: none; cursor: pointer; transition: all 0.3s;" class="flame-text">×</button>
+            <!-- PERBAIKAN: Mengganti classList.add('hidden') menjadi style.display = 'none' -->
+            <button onclick="document.getElementById('add-portal-modal').style.display = 'none'" style="position: absolute; top: 1rem; right: 1rem; font-size: 2rem; background: none; border: none; cursor: pointer; transition: all 0.3s;" class="flame-text">×</button>
             
             <h2 class="font-cinzel gold-text" style="font-size: 1.5rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Forge New Portal</h2>
 
@@ -843,7 +859,8 @@
                 </div>
 
                 <div style="display: flex; justify-content: flex-end; gap: 0.75rem; padding-top: 0.5rem;">
-                    <button type="button" onclick="document.getElementById('add-portal-modal').classList.add('hidden')" class="btn-secondary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
+                    <!-- PERBAIKAN: Mengganti classList.add('hidden') menjadi style.display = 'none' -->
+                    <button type="button" onclick="document.getElementById('add-portal-modal').style.display = 'none'" class="btn-secondary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
                         Cancel
                     </button>
                     <button type="submit" class="btn-lava" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
