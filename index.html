@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uranus Fazry MLBB Portal | Lord of Scalding Seas</title>
+    <title>MLBB Portal | Lord of Scalding Seas by Uranusfazry</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f608.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -12,9 +14,502 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <!-- LZString untuk kompresi -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
+    <!-- QRious untuk QR Code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 
     <style>
-        @import url(https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&display=swap);@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap);#particle-canvas,body::after,body::before{left:0;width:100%;height:100%;z-index:1;pointer-events:none;position:fixed;top:0}.delete-btn:hover,.flame-text{color:var(--flame-red)}.modal-content code,body,input,select,textarea{font-family:Inter,sans-serif}:root{--flame-red:#d62828;--lava-orange:#ff7a18;--gold:#fcbf49;--dark-stone:#1b1b1b;--deep-magma:#2b0000;--bright-gold:#ffd700;--ember-glow:#ff4500}*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}body{background:linear-gradient(180deg,var(--dark-stone) 0,var(--deep-magma) 100%);color:#fff;min-height:100vh;overflow-x:hidden;position:relative;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}#bg-container{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;overflow:hidden}.bg-media{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;filter:brightness(.3) saturate(1.5) hue-rotate(10deg);transition:transform .5s,opacity .5s,filter .5s}#bg-video{opacity:.25;z-index:1}#bg-image{opacity:0;z-index:0}@media (min-width:1024px){.bg-media{width:100vh;height:100vw;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-90deg)}}body::before{content:'';background:radial-gradient(ellipse at 20% 30%,rgba(214,40,40,.2) 0,transparent 50%),radial-gradient(ellipse at 80% 70%,rgba(255,122,24,.15) 0,transparent 50%),radial-gradient(ellipse at 50% 50%,rgba(252,191,73,.1) 0,transparent 70%);animation:8s ease-in-out infinite magmaPulse}@keyframes magmaPulse{0%,100%{opacity:.6}50%{opacity:1}}body::after{content:'';background-image:linear-gradient(rgba(252,191,73,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,122,24,.03) 1px,transparent 1px);background-size:60px 60px;animation:25s linear infinite emberDrift}@keyframes emberDrift{0%{transform:translate(0,0)}100%{transform:translate(60px,60px)}}.content-layer{position:relative;z-index:10}main.content-layer{flex-grow:1}.font-cinzel{font-family:Cinzel,serif}.font-playfair{font-family:'Playfair Display',serif}.gold-text,.lava-text{color:var(--gold)}.epic-glitch{position:relative;font-family:Cinzel,serif;font-weight:900;letter-spacing:.08em}.navbar{background:rgba(27,27,27,.7);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);border-bottom:2px solid rgba(252,191,73,.3);box-shadow:0 4px 30px rgba(214,40,40,.2);transition:.3s}#mobile-menu,.dropdown{background:rgba(27,27,27,.95)}.navbar .container>div{height:70px;transition:height .3s}@media (min-width:768px){.navbar .container>div{height:90px}}.nav-item{transition:.3s;position:relative;padding:.5rem 1rem}.btn-lava,.btn-secondary{font-family:Cinzel,serif;padding:.75rem 1.5rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;transition:.3s}.nav-item:hover i,.nav-item:hover span{color:var(--gold);text-shadow:0 0 15px var(--bright-gold)}.nav-item::after{content:'';position:absolute;bottom:-5px;left:50%;transform:translateX(-50%);width:0;height:3px;background:linear-gradient(90deg,var(--lava-orange),var(--gold));transition:width .3s;border-radius:2px;box-shadow:0 0 10px var(--gold)}.nav-item:hover::after{width:100%}.dropdown{display:none;position:absolute;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:2px solid var(--gold);box-shadow:0 10px 40px rgba(252,191,73,.3);border-radius:12px;margin-top:12px;animation:.3s dropFadeIn}.btn-lava,.time-container{border:2px solid var(--gold);overflow:hidden}@keyframes dropFadeIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}.group:hover .dropdown{display:block}#mobile-menu-overlay{position:fixed;inset:0;background:rgba(27,27,27,.8);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:55;transition:opacity .3s}#mobile-menu{position:fixed;top:0;right:0;height:100%;width:80%;max-width:320px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-left:2px solid var(--gold);z-index:60;transform:translateX(100%);transition:transform .3s cubic-bezier(.175, .885, .32, 1.275);padding:2rem 1.5rem;display:flex;flex-direction:column}#mobile-menu.open{transform:translateX(0)}.btn-lava{background:linear-gradient(135deg,var(--lava-orange),var(--flame-red));border-radius:8px;position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;color:#fff;text-shadow:0 0 10px rgba(0,0,0,.5);box-shadow:0 0 20px rgba(255,122,24,.4)}.btn-lava::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(252,191,73,.6),transparent);transition:left .5s;z-index:-1;animation:3s ease-in-out infinite lavaFlow}@keyframes lavaFlow{0%,100%{left:-100%}50%{left:100%}}.btn-lava:hover{box-shadow:0 0 30px var(--gold),0 0 50px var(--lava-orange);transform:translateY(-3px);border-color:var(--bright-gold)}.btn-lava:active{transform:translateY(0) scale(.97);box-shadow:0 0 15px var(--gold);transition-duration:.1s}.btn-secondary{background:rgba(252,191,73,.1);border:2px solid rgba(252,191,73,.4);border-radius:8px;color:var(--gold)}.btn-secondary:hover{background:rgba(252,191,73,.2);border-color:var(--gold);box-shadow:0 0 20px rgba(252,191,73,.3)}.portal-card{background:rgba(43,0,0,.6);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:2px solid;border-radius:16px;transition:.4s cubic-bezier(.175, .885, .32, 1.275);position:relative;overflow:hidden;box-shadow:0 5px 25px rgba(0,0,0,.6)}.portal-card:hover{transform:translateY(-10px);box-shadow:0 15px 40px rgba(0,0,0,.4),0 0 40px currentColor}.portal-card::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent 30%,rgba(252,191,73,.1) 50%,transparent 70%);transform:rotate(45deg);animation:5s linear infinite goldShimmer;opacity:.8}@keyframes goldShimmer{0%{transform:translateX(-100%) translateY(-100%) rotate(45deg)}100%{transform:translateX(100%) translateY(100%) rotate(45deg)}}.delete-btn{position:absolute;top:12px;right:12px;color:rgba(214,40,40,.7);background:rgba(0,0,0,.4);border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;transition:.3s;z-index:20;opacity:.7;border:1px solid rgba(214,40,40,.5)}.portal-card:hover .delete-btn{opacity:1}.delete-btn:hover{background:rgba(0,0,0,.6);transform:scale(1.15);box-shadow:0 0 15px var(--flame-red)}.profile{margin:0 auto 2rem;width:160px;height:160px;border-radius:50%;overflow:hidden;border:4px solid var(--gold);position:relative}.profile img,.profile video{width:100%;height:100%;object-fit:cover;position:relative;z-index:1}.time-container{background:rgba(43,0,0,.7);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);box-shadow:0 0 30px rgba(252,191,73,.4),inset 0 0 25px rgba(255,122,24,.2);border-radius:12px;position:relative}.time-container::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(252,191,73,.3),transparent);animation:4s ease-in-out infinite timeScan}@keyframes timeScan{0%,100%{left:-100%}50%{left:100%}}.modal-overlay{background:rgba(27,27,27,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:.3s modalFadeIn}.modal-content{background:rgba(43,0,0,.95);backdrop-filter:blur(25px);-webkit-backdrop-filter:blur(25px);border:2px solid var(--gold);box-shadow:0 0 50px rgba(252,191,73,.4);border-radius:16px;animation:.4s cubic-bezier(.175,.885,.32,1.275) modalSlideIn}@keyframes modalFadeIn{from{opacity:0}to{opacity:1}}@keyframes modalSlideIn{from{transform:translateY(-40px) scale(.9);opacity:0}to{transform:translateY(0) scale(1);opacity:1}}input,select,textarea{background:rgba(27,27,27,.9)!important;border:2px solid rgba(252,191,73,.4);transition:.3s;border-radius:8px;color:#fff}input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 20px rgba(252,191,73,.5);outline:0;background:rgba(27,27,27,.95)!important}select option{background:var(--dark-stone);color:#fff;padding:10px}::placeholder{color:rgba(252,191,73,.5);opacity:1}.modal-content code{background:rgba(0,0,0,.4);color:var(--gold);padding:3px 6px;border-radius:4px}::-webkit-scrollbar{width:12px}::-webkit-scrollbar-track{background:rgba(27,27,27,.6)}::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--lava-orange),var(--gold));border-radius:6px}::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,var(--gold),var(--flame-red))}.logo-pulse{animation:4s ease-in-out infinite flamePulse}@keyframes flamePulse{0%,100%{transform:scale(1);filter:drop-shadow(0 0 15px var(--gold))}50%{transform:scale(1.15);filter:drop-shadow(0 0 30px var(--lava-orange))}}footer{background:rgba(27,27,27,.9);border-top:2px solid rgba(252,191,73,.3);margin-top:auto;height:70px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 1rem;box-shadow:0 -4px 30px rgba(214,40,40,.2)}footer p:first-child{font-size:14px}.container{max-width:1200px;margin:0 auto;padding:0 1rem}.hidden{display:none}body.light-mode #bg-image{opacity:1!important;filter:saturate(1.15)}body.light-mode #bg-video{opacity:.35;z-index:1}
+        /* Import Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
+
+        /* Color Variables */
+        :root {
+            /* Bane Base Colors */
+            --flame-red: #d62828;
+            --lava-orange: #ff7a18;
+            --gold: #fcbf49;
+            --dark-stone: #1b1b1b;
+            --deep-magma: #2b0000;
+            --bright-gold: #ffd700;
+            --ember-glow: #ff4500;
+
+            /* Utility Colors */
+            --success-green: #00e0b8;
+            --error-red: #ff3b3b;
+            --warning-yellow: #ffd700;
+        }
+
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(180deg, var(--dark-stone) 0%, var(--deep-magma) 100%);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Background Effects - Static Only */
+        #bg-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-media {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.3) saturate(1.5) hue-rotate(10deg);
+            /* Removed animation transitions for filters */
+            transition: opacity 0.5s ease;
+        }
+
+        #bg-video { opacity: 0.25; z-index: 1; }
+        #bg-image { opacity: 0; z-index: 0; }
+
+        @media (min-width: 1024px) {
+            .bg-media {
+                width: 100vh;
+                height: 100vw;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-90deg);
+            }
+        }
+
+        /* Static Overlay (Replaces animated lava/ember) */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at center, rgba(214, 40, 40, 0.1) 0%, transparent 70%);
+            z-index: 1; pointer-events: none;
+        }
+
+        #particle-canvas {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 1; pointer-events: none;
+        }
+
+        .content-layer { position: relative; z-index: 10; }
+        main.content-layer { flex-grow: 1; }
+
+        /* Typography */
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .flame-text { color: var(--flame-red); }
+        .gold-text { color: var(--gold); }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(27, 27, 27, 0.95); /* Solid background, less transparent */
+            border-bottom: 2px solid rgba(252, 191, 73, 0.3);
+            /* Removed glow box-shadow */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+            transition: all 0.3s ease;
+        }
+
+        .navbar .container > div {
+            height: 70px;
+            transition: height 0.3s ease;
+        }
+
+        @media (min-width: 768px) {
+            .navbar .container > div { height: 90px; }
+        }
+
+        .nav-item {
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+        }
+
+        .nav-item:hover span, .nav-item:hover i {
+            color: var(--gold);
+            /* Removed text-shadow */
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -5px; left: 50%;
+            transform: translateX(-50%);
+            width: 0; height: 3px;
+            background: var(--gold); /* Solid color, no gradient */
+            transition: width 0.3s ease;
+            border-radius: 2px;
+            /* Removed box-shadow */
+        }
+
+        .nav-item:hover::after { width: 100%; }
+
+        /* Dropdown */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background: #1b1b1b;
+            border: 2px solid var(--gold);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Standard shadow */
+            border-radius: 12px;
+            margin-top: 12px;
+            /* Kept simple fade-in transition for usability */
+            animation: dropFadeIn 0.2s ease;
+        }
+
+        @keyframes dropFadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .group:hover .dropdown { display: block; }
+
+        /* Mobile Menu */
+        #mobile-menu-overlay {
+            position: fixed; inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 55;
+            transition: opacity 0.3s ease;
+        }
+
+        #mobile-menu {
+            position: fixed; top: 0; right: 0;
+            height: 100%; width: 80%; max-width: 320px;
+            background: #1b1b1b;
+            border-left: 2px solid var(--gold);
+            z-index: 60;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            padding: 2rem 1.5rem;
+            display: flex; flex-direction: column;
+        }
+
+        #mobile-menu.open { transform: translateX(0); }
+
+        /* Buttons - Flat Style */
+        .btn-lava {
+            font-family: 'Cinzel', serif;
+            background: var(--lava-orange); /* Solid color instead of gradient/glow */
+            border: 2px solid var(--gold);
+            border-radius: 8px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            display: inline-flex; align-items: center; justify-content: center;
+            color: #fff;
+            /* Removed text-shadow and box-shadow */
+        }
+
+        /* Removed .btn-lava::before animation */
+
+        .btn-lava:hover {
+            background: var(--flame-red);
+            border-color: #fff;
+            transform: translateY(-2px);
+            /* Removed glow box-shadow */
+        }
+
+        .btn-secondary {
+            font-family: 'Cinzel', serif;
+            background: transparent;
+            border: 2px solid var(--gold);
+            border-radius: 8px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.2s ease;
+            color: var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(252, 191, 73, 0.1);
+            border-color: #fff;
+            color: #fff;
+            /* Removed glow */
+        }
+
+        /* Portal Grid */
+        #portals-grid {
+            display: grid; gap: 1.5rem; margin-bottom: 3rem;
+            grid-template-columns: 1fr;
+        }
+        @media (min-width: 640px) { #portals-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { #portals-grid { grid-template-columns: repeat(3, 1fr); } }
+
+        /* Portal Cards - Flat Style */
+        .portal-card {
+            background: rgba(27, 27, 27, 0.9);
+            border: 2px solid; /* Color set inline */
+            border-radius: 16px;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Standard shadow */
+            height: 100%; display: flex; flex-direction: column; cursor: pointer;
+        }
+
+        .portal-card:hover {
+            transform: translateY(-5px);
+            /* Removed colored glow shadow */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Removed .portal-card::before shimmer animation */
+
+        .delete-btn {
+            position: absolute; top: 12px; right: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%; width: 32px; height: 32px;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s ease; z-index: 20; opacity: 0.7;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .portal-card:hover .delete-btn { opacity: 1; }
+        .delete-btn:hover {
+            color: #fff; background: var(--flame-red);
+            border-color: var(--flame-red);
+            /* Removed glow */
+        }
+
+        /* Lock Indicator */
+        .lock-indicator {
+            position: absolute; top: 12px; left: 12px;
+            color: var(--gold); background: rgba(0, 0, 0, 0.8);
+            border-radius: 50%; width: 32px; height: 32px;
+            display: flex; align-items: center; justify-content: center;
+            z-index: 20; border: 1px solid var(--gold);
+            font-size: 0.9rem;
+        }
+
+        /* Profile/Avatar */
+        .profile {
+            margin: 0 auto 1.5rem;
+            width: 160px; height: 160px;
+            border-radius: 50%; overflow: hidden;
+            border: 4px solid var(--gold);
+            position: relative;
+            background: #000;
+        }
+        .profile img { width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1; }
+
+        /* Time Display - Clean */
+        .time-container {
+            background: rgba(27, 27, 27, 0.8);
+            border: 2px solid var(--gold);
+            /* Removed glow box-shadows */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            border-radius: 12px; position: relative; overflow: hidden;
+        }
+
+        /* Removed .time-container::before scan animation */
+
+        /* Modals & Inputs */
+        .modal-overlay {
+            background: rgba(0, 0, 0, 0.85);
+            /* Removed blur for cleaner flat look, or keep slight blur if preferred. Removing blur improves performance */
+            backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
+            animation: modalFadeIn 0.2s ease;
+        }
+
+        .modal-content {
+            background: #1b1b1b;
+            border: 2px solid var(--gold);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8); /* Standard shadow */
+            border-radius: 16px;
+            padding: 2rem !important;
+            max-width: 360px !important; width: 90%; margin: 0 auto;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes modalSlideIn { from { transform: translateY(-20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+        /* Inputs */
+        input, textarea, select {
+            background: #2a2a2a !important;
+            border: 1px solid #444;
+            transition: border-color 0.3s ease;
+            border-radius: 6px;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            padding: 0.5rem 0.75rem !important;
+            font-size: 0.85rem !important;
+            width: 100%;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: var(--gold);
+            /* Removed glow box-shadow */
+            outline: none;
+            background: #333 !important;
+        }
+        
+        select option { background: #1b1b1b; color: #fff; padding: 8px; }
+        ::placeholder { color: #888; opacity: 1; font-size: 0.8rem; }
+        .modal-content code {
+            background: #000; color: var(--gold);
+            padding: 3px 6px; border-radius: 4px; font-family: 'Inter', sans-serif;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 12px; }
+        ::-webkit-scrollbar-track { background: #1b1b1b; }
+        ::-webkit-scrollbar-thumb {
+            background: #444;
+            border-radius: 6px;
+        }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+        /* Removed .logo-pulse animation */
+        .logo-static { filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+
+        /* Notification System - Flat */
+        .notif-container {
+            position: fixed; top: 20px; right: 20px; z-index: 9999;
+            display: flex; flex-direction: column; gap: 15px; pointer-events: none;
+        }
+
+        .notif-toast {
+            min-width: 320px; max-width: 400px;
+            background: #1b1b1b;
+            border-left: 4px solid var(--gold); border-radius: 8px;
+            padding: 16px 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            display: flex; align-items: flex-start; gap: 15px;
+            transform: translateX(120%); transition: transform 0.3s ease;
+            pointer-events: auto; position: relative; overflow: hidden;
+        }
+
+        .notif-toast.show { transform: translateX(0); }
+        .notif-toast.success { border-color: var(--success-green); }
+        .notif-toast.success .notif-icon { color: var(--success-green); background: rgba(0, 224, 184, 0.1); }
+        .notif-toast.error { border-color: var(--error-red); }
+        .notif-toast.error .notif-icon { color: var(--error-red); background: rgba(255, 59, 59, 0.1); }
+
+        .notif-icon {
+            width: 32px; height: 32px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 16px; flex-shrink: 0;
+        }
+
+        .notif-content { flex-grow: 1; }
+        .notif-title {
+            font-family: 'Cinzel', serif; font-weight: 700;
+            font-size: 0.95rem; color: #fff; margin-bottom: 4px; letter-spacing: 0.03em;
+        }
+        .notif-message {
+            font-family: 'Inter', sans-serif; font-size: 0.85rem;
+            color: #ccc; line-height: 1.4;
+        }
+        .notif-close {
+            background: none; border: none; color: #888;
+            cursor: pointer; font-size: 1.1rem; padding: 0;
+            transition: color 0.3s; margin-top: 2px;
+        }
+        .notif-close:hover { color: #fff; }
+        .notif-progress {
+            position: absolute; bottom: 0; left: 0; height: 3px;
+            background: var(--gold);
+            width: 100%; transform-origin: left;
+            animation: progressLinear 4s linear forwards;
+        }
+        @keyframes progressLinear { from { width: 100%; } to { width: 0%; } }
+        
+        @media (max-width: 768px) {
+            .notif-container { top: auto; bottom: 30px; right: 0; left: 0; align-items: center; }
+            .notif-toast { transform: translateY(100px); min-width: 90%; max-width: 90%; }
+            .notif-toast.show { transform: translateY(0); }
+        }
+
+        /* QR Wrapper & Reveal */
+        .hidden-content { display: none; margin-top: 1rem; }
+        
+        .reveal-btn {
+            width: 100%; padding: 0.75rem 1.25rem;
+            background: transparent; border: 1px solid var(--gold);
+            border-radius: 8px; color: var(--gold);
+            font-family: 'Cinzel', serif; font-size: 0.85rem; font-weight: 700; cursor: pointer;
+            transition: all 0.2s ease; display: flex; align-items: center; justify-content: center;
+            gap: 10px; margin-bottom: 0; text-transform: uppercase; letter-spacing: 0.05em;
+        }
+        .reveal-btn:hover {
+            background: rgba(252, 191, 73, 0.1); color: #fff;
+        }
+
+        #qr-wrapper { margin-top: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; }
+        .qr-frame { position: relative; padding: 0; background: transparent; display: inline-block; }
+        #qr-canvas-display {
+            border-radius: 8px; border: 4px solid #fff;
+            max-width: 200px; width: 100%; height: auto;
+        }
+
+        .btn-download-4k {
+            background: #ffffff; border: none; color: #000;
+            padding: 0.6rem 1rem; border-radius: 20px; font-size: 0.75rem;
+            margin-top: 1.25rem; cursor: pointer; transition: all 0.2s;
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            font-family: 'Inter', sans-serif; font-weight: 700; text-transform: uppercase;
+        }
+        .btn-download-4k:hover { background: #ddd; }
+
+        /* Capacity & Warnings */
+        .hide-capacity {
+            opacity: 0; max-height: 0; margin-bottom: 0 !important; padding: 0 !important;
+            border: none !important; overflow: hidden; transition: all 0.3s ease;
+        }
+        .shortener-badge {
+            background: #333; border: 1px solid var(--gold);
+            border-radius: 4px; padding: 4px 8px; font-family: 'Inter', sans-serif;
+            font-weight: 600; color: #fff; font-size: 0.85rem; display: inline-block; margin: 0 4px;
+        }
+        .modal-actions { display: flex; flex-direction: column; gap: 1.5rem; }
+
+        /* Footer */
+        footer {
+            background: #1b1b1b;
+            border-top: 1px solid #333;
+            margin-top: auto; height: 70px;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 0 1rem;
+        }
+        footer p:first-child { font-size: 14px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+        .hidden { display: none; }
+
+        /* Light Mode */
+        body.light-mode #bg-image { opacity: 1 !important; filter: saturate(1.15); }
+        body.light-mode #bg-video { opacity: 0.35; z-index: 1; }
     </style>
 </head>
 <body>
@@ -28,57 +523,59 @@
     </div>
     <canvas id="particle-canvas"></canvas>
 
+    <!-- Notification Container -->
+    <div id="notif-container" class="notif-container"></div>
+
     <!-- Navbar -->
     <nav class="navbar fixed top-0 left-0 right-0 z-50 content-layer" style="position: fixed; top: 0; left: 0; right: 0; z-index: 50;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <!-- Logo -->
-                <!-- DIUBAH: Ditambahkan style untuk mencegah seleksi/drag -->
-                <div id="logo-container" style="display: flex; align-items: center; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
-                    <img src="https://i.imghippo.com/files/EePl9866XxI.png" alt="Bane Logo" class="logo-pulse" style="height: 50px; width: auto;" draggable="false"> <!-- DIUBAH: Ditambahkan draggable="false" -->
+                <div id="logo-container" style="display: flex; align-items: center; cursor: pointer; user-select: none;">
+                    <!-- Removed pulse class -->
+                    <img src="https://i.imghippo.com/files/EePl9866XxI.png" alt="Bane Logo" class="logo-static" style="height: 50px; width: auto;" draggable="false">
                     <span class="font-cinzel gold-text" style="font-weight: 700; font-size: 1.25rem; letter-spacing: 0.05em; margin-left: 1rem;">MLBB BANE</span>
                 </div>
 
                 <!-- Desktop Nav -->
                 <div style="display: none;" class="desktop-nav">
                     <div class="nav-item relative group" style="display: inline-block; position: relative;">
-                            <!-- DIUBAH: Dikembalikan ke flame-text -->
-                            <button class="flame-text" style="display: flex; align-items: center; gap: 0.5rem; background: none; border: none; cursor: pointer; font-family: 'Cinzel', serif; font-size: 0.875rem; text-transform: uppercase;">
-                                <i class="fas fa-fire"></i>
-                                <span>Forge</span>
-                                <i class="fas fa-chevron-down" style="font-size: 0.75rem; transition: transform 0.3s;"></i>
+                        <button class="flame-text" style="display: flex; align-items: center; gap: 0.5rem; background: none; border: none; cursor: pointer; font-family: 'Cinzel', serif; font-size: 0.875rem; text-transform: uppercase;">
+                            <i class="fas fa-fire"></i>
+                            <span>Forge</span>
+                            <i class="fas fa-chevron-down" style="font-size: 0.75rem; transition: transform 0.3s;"></i>
+                        </button>
+                        <div class="dropdown" style="position: absolute; right: 0; width: 320px; padding: 1.5rem; margin-top: 0.75rem;">
+                            <h3 class="font-cinzel" style="font-size: 0.875rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold);">Create Portal</h3>
+                            <button onclick="showAddLinkModal()" class="btn-secondary" style="width: 100%; font-size: 0.875rem; margin-bottom: 1rem;">
+                                <i class="fas fa-plus" style="margin-right: 0.5rem;"></i>Add Portal
                             </button>
-                            <div class="dropdown" style="position: absolute; right: 0; width: 320px; padding: 1.5rem; margin-top: 0.75rem;">
-                                <!-- DIUBAH: Hapus class 'flame-text' dan tambahkan 'color: var(--gold);' -->
-                                <!-- ===== [PERBAIKAN] Tag h3 yang rusak di bawah ini telah diperbaiki ===== -->
-                                <h3 class="font-cinzel" style="font-size: 0.875rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold);">Create Portal</h3>
-                                
-                                <button onclick="showAddLinkModal()" class="btn-secondary" style="width: 100%; font-size: 0.875rem; margin-bottom: 1rem;">
-                                    <i class="fas fa-plus" style="margin-right: 0.5rem;"></i>Add Portal
-                                </button>
 
-                                <!-- DIUBAH: Hapus class 'gold-text' dan tambahkan 'color: var(--gold);' -->
-                                <h3 class="font-cinzel" style="font-size: 0.875rem; margin-top: 1.5rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold);">Data Vault</h3>
-                                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;">
-                                    <!-- DIUBAH: class="btn-lava" menjadi "btn-secondary" -->
-                                    <button onclick="importData()" class="btn-secondary" style="width: 100%; font-size: 0.75rem; padding: 0.5rem 1rem;"><i class="fas fa-upload" style="margin-right: 0.25rem;"></i>Import</button>
-                                    <!-- DIUBAH: class="btn-lava" menjadi "btn-secondary" -->
-                                    <button onclick="backupData()" class="btn-secondary" style="width: 100%; font-size: 0.75rem; padding: 0.5rem 1rem;"><i class="fas fa-download" style="margin-right: 0.25rem;"></i>Backup</button>
-                                </div>
-
-                                <!-- DIUBAH: Hapus class 'flame-text' dan tambahkan 'color: var(--gold);' -->
-                                <h3 class="font-cinzel" style="font-size: 0.875rem; margin-top: 1.5rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold);">Purge System</h3>
-                                <!-- DIUBAH: class="btn-lava" menjadi "btn-secondary" -->
-                                <button onclick="showConfirmationModal('Unleash the reset flame?', resetAllSettings)" class="btn-secondary" style="width: 100%; font-size: 0.875rem;">
-                                    <i class="fas fa-skull-crossbones" style="margin-right: 0.5rem;"></i>Reset All
-                                </button>
+                            <h3 class="font-cinzel" style="font-size: 0.875rem; margin-top: 1.5rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold);">Data Vault</h3>
+                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;">
+                                <button onclick="importData()" class="btn-secondary" style="width: 100%; font-size: 0.75rem; padding: 0.5rem 1rem;"><i class="fas fa-upload" style="margin-right: 0.25rem;"></i>Import</button>
+                                <button onclick="backupData()" class="btn-secondary" style="width: 100%; font-size: 0.75rem; padding: 0.5rem 1rem;"><i class="fas fa-download" style="margin-right: 0.25rem;"></i>Backup</button>
                             </div>
+
+                            <button onclick="generateSmartLink()" class="btn-secondary" style="width: 100%; font-size: 0.875rem; margin-top: 0.75rem;">
+                                <i class="fas fa-link" style="margin-right: 0.5rem;"></i>Generate Smart Link
+                            </button>
+                            
+                            <!-- WA GENERATOR BUTTON -->
+                            <button onclick="showWhatsAppModal()" class="btn-secondary" style="width: 100%; font-size: 0.875rem; margin-top: 0.75rem;">
+                                <i class="fab fa-whatsapp" style="margin-right: 0.5rem;"></i>Generate WhatsApp Link
+                            </button>
+
+                            <h3 class="font-cinzel" style="font-size: 0.875rem; margin-top: 1.5rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold);">Purge System</h3>
+                            <button onclick="showConfirmationModal('Unleash the reset flame?', resetAllSettings)" class="btn-secondary" style="width: 100%; font-size: 0.875rem;">
+                                <i class="fas fa-skull-crossbones" style="margin-right: 0.5rem;"></i>Reset All
+                            </button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="mobile-nav-toggle">
-                    <!-- DIUBAH: Dikembalikan ke flame-text -->
                     <button id="mobile-menu-button" class="flame-text" style="background: none; border: none; font-size: 2rem; cursor: pointer; outline: none;">
                         <i class="fas fa-fire"></i>
                     </button>
@@ -88,37 +585,36 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu-overlay" class="fixed inset-0 z-50 hidden" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 55;" onclick="closeMobileMenu()"></div>
-    <div id="mobile-menu" style="padding: 2rem 1.5rem;">
-        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid rgba(252, 191, 73, 0.3);">
-            <!-- DIUBAH: Hapus class 'gold-text' dan tambahkan 'color: var(--gold);' -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-50 hidden" onclick="closeMobileMenu()"></div>
+    <div id="mobile-menu">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid #333;">
             <span class="font-cinzel" style="font-size: 1.125rem; color: var(--gold);">FORGE</span>
-            <!-- DIUBAH: Hapus class 'flame-text' dan tambahkan 'color: var(--gold);' -->
             <button onclick="closeMobileMenu()" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--gold);">
                 <i class="fas fa-times"></i>
             </button>
         </div>
 
         <div style="flex-grow: 1; overflow-y: auto;">
-            <!-- DIUBAH: Hapus class 'flame-text' dan tambahkan 'color: var(--gold);' -->
             <h3 class="font-cinzel" style="font-size: 0.875rem; margin-bottom: 0.75rem; margin-top: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold);">Portal</h3>
-            <!-- DIUBAH: class="btn-lava" menjadi "btn-secondary" -->
             <button onclick="showAddLinkModal(); closeMobileMenu();" class="btn-secondary" style="width: 100%; font-size: 0.875rem; margin-bottom: 1rem;">
                 <i class="fas fa-plus" style="margin-right: 0.5rem;"></i>Add Portal
             </button>
 
-            <!-- DIUBAH: Hapus class 'gold-text' dan tambahkan 'color: var(--gold);' -->
             <h3 class="font-cinzel" style="font-size: 0.875rem; margin-top: 1rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold);">Data</h3>
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1rem;">
-                <!-- DIUBAH: class="btn-lava" menjadi "btn-secondary" -->
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 0.75rem;">
                 <button onclick="importData(); closeMobileMenu();" class="btn-secondary" style="width: 100%; font-size: 0.75rem; padding: 0.5rem 1rem;"><i class="fas fa-upload" style="margin-right: 0.25rem;"></i>Import</button>
-                <!-- DIUBAH: class="btn-lava" menjadi "btn-secondary" -->
                 <button onclick="backupData(); closeMobileMenu();" class="btn-secondary" style="width: 100%; font-size: 0.75rem; padding: 0.5rem 1rem;"><i class="fas fa-download" style="margin-right: 0.25rem;"></i>Backup</button>
             </div>
+            
+            <button onclick="generateSmartLink(); closeMobileMenu();" class="btn-secondary" style="width: 100%; font-size: 0.875rem; margin-bottom: 1rem;">
+                <i class="fas fa-link" style="margin-right: 0.5rem;"></i>Generate Smart Link
+            </button>
 
-            <!-- DIUBAH: Hapus class 'flame-text' dan tambahkan 'color: var(--gold);' -->
+            <button onclick="showWhatsAppModal(); closeMobileMenu();" class="btn-secondary" style="width: 100%; font-size: 0.875rem; margin-bottom: 1rem;">
+                <i class="fab fa-whatsapp" style="margin-right: 0.5rem;"></i>Generate WhatsApp Link
+            </button>
+            
             <h3 class="font-cinzel" style="font-size: 0.875rem; margin-top: 1rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold);">System</h3>
-            <!-- DIUBAH: class="btn-lava" menjadi "btn-secondary" -->
             <button onclick="showConfirmationModal('Unleash reset?', resetAllSettings); closeMobileMenu();" class="btn-secondary" style="width: 100%; font-size: 0.875rem; margin-bottom: 1rem;">
                 <i class="fas fa-skull-crossbones" style="margin-right: 0.5rem;"></i>Reset All
             </button>
@@ -130,19 +626,14 @@
         <header style="text-align: center; margin-bottom: 3rem;">
             <!-- Profile -->
             <div class="profile">
-                <!-- DIUBAH: Tag <video> menjadi <img> -->
                 <img src="https://i.imghippo.com/files/PBP5373k.jpg" alt="Bane Avatar" style="object-position: 50% 25%; will-change: transform;">
             </div>
 
-            <!-- Epic Title -->
-            <!-- DIUBAH: Hapus class 'epic-glitch', 'gold-text', dan inline style 'position:relative' -->
+            <!-- Title -->
             <div style="display: inline-block; margin-bottom: 1.5rem;">
-                <h1 class="font-playfair" data-text="LORD OF SCALDING SEAS" style="font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem; color: var(--gold);">LORD OF SCALDING SEAS</h1>
+                <h1 class="font-playfair" style="font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem; color: var(--gold);">LORD OF SCALDING SEAS</h1>
             </div>
-             <!-- DIUBAH: Hapus inline style 'color' dan tambahkan kembali class 'flame-text' -->
             <p class="font-cinzel flame-text" style="font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">MLBB Creator & Web Developer</p>
-            <p style="max-width: 42rem; margin: 1.5rem auto 0; font-size: 1rem; line-height: 1.6; color: rgba(252, 191, 73, 0.8);">
-            </p>
         </header>
 
         <!-- Time Display -->
@@ -154,39 +645,41 @@
         </div>
 
         <!-- Portal Grid -->
-        <div id="portals-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+        <div id="portals-grid">
             <!-- Portal cards rendered by JS -->
         </div>
     </main>
 
     <!-- Footer -->
     <footer class="content-layer" style="text-align: center; color: #fff;">
-        <p class="font-cinzel" style="font-size: 0.875rem; opacity: 0.85;">© 2025 Created by LORD OF SCALDING SEAS | All Rights Reserved</p>
+        <p class="font-cinzel" style="font-size: 0.875rem; opacity: 0.85;">© 2026 Created by LORD OF SCALDING SEAS | All Rights Reserved</p>
         <p class="gold-text font-cinzel" style="font-size: 0.75rem; margin-top: 0.5rem;">Forged by Uranus Support Technology</p>
     </footer>
 
     <!-- Add Portal Modal -->
     <div id="add-portal-modal" class="fixed inset-0 flex items-center justify-center z-50 hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 50;">
-        <div class="modal-content" style="max-width: 28rem; width: 100%; margin: 0 1.5rem; position: relative; padding: 2rem;">
-            <!-- DIUBAH: onclick diperbarui untuk menggunakan style.display = 'none' -->
-            <button onclick="document.getElementById('add-portal-modal').style.display = 'none'" style="position: absolute; top: 1rem; right: 1rem; font-size: 2rem; background: none; border: none; cursor: pointer; transition: all 0.3s;" class="flame-text">×</button>
-            
-            <h2 class="font-cinzel gold-text" style="font-size: 1.5rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Forge New Portal</h2>
-
-            <form id="portal-form" style="display: flex; flex-direction: column; gap: 1rem;">
-                <div>
-                    <label for="portal-name" class="font-cinzel gold-text" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Portal Name</label>
-                    <input type="text" id="portal-name" style="width: 100%; padding: 0.75rem; border-radius: 8px; font-size: 1rem;" placeholder="Enter portal name" required>
+        <div class="modal-content">
+            <button onclick="document.getElementById('add-portal-modal').style.display = 'none'" class="modal-close-btn" style="position: absolute; top: 0.8rem; right: 0.8rem; background: none; border: none; color: white; cursor: pointer;">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="font-cinzel gold-text" style="font-size: 1.25rem; margin-bottom: 1.25rem; font-weight: 700;">Forge New Portal</h2>
+            <form id="portal-form">
+                <div style="margin-bottom: 0.75rem;">
+                    <label for="portal-name" class="font-cinzel gold-text" style="font-size: 0.7rem; display: block; margin-bottom: 0.25rem;">Portal Name</label>
+                    <input type="text" id="portal-name" placeholder="Enter portal name" required>
                 </div>
-
-                <div>
-                    <label for="portal-url" class="font-cinzel gold-text" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Destination URL</label>
-                    <input type="url" id="portal-url" style="width: 100%; padding: 0.75rem; border-radius: 8px; font-size: 1rem;" placeholder="https://your-link.com" required>
+                <div style="margin-bottom: 0.75rem;">
+                    <label for="portal-url" class="font-cinzel gold-text" style="font-size: 0.7rem; display: block; margin-bottom: 0.25rem;">Destination URL</label>
+                    <input type="url" id="portal-url" placeholder="https://your-link.com" required>
                 </div>
-
-                <div>
-                    <label for="portal-icon" class="font-cinzel gold-text" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Portal Icon</label>
-                    <select id="portal-icon" style="width: 100%; padding: 0.75rem; border-radius: 8px; font-size: 1rem; appearance: none;">
+                <!-- Password Protection Field -->
+                <div style="margin-bottom: 0.75rem;">
+                    <label for="portal-password" class="font-cinzel gold-text" style="font-size: 0.7rem; display: block; margin-bottom: 0.25rem;"><i class="fas fa-lock" style="margin-right: 4px;"></i> Protect with Password (Optional)</label>
+                    <input type="password" id="portal-password" placeholder="Leave empty for public access">
+                </div>
+                <div style="margin-bottom: 0.75rem;">
+                    <label for="portal-icon" class="font-cinzel gold-text" style="font-size: 0.7rem; display: block; margin-bottom: 0.25rem;">Portal Icon</label>
+                    <select id="portal-icon" style="appearance: none;">
                         <option value="fas fa-fire">🔥 Fire</option>
                         <option value="fas fa-skull">💀 Skull</option>
                         <option value="fas fa-anchor">⚓ Anchor</option>
@@ -197,48 +690,173 @@
                         <option value="fas fa-shield">🛡️ Shield</option>
                         <option value="fas fa-dragon">🐉 Dragon</option>
                         <option value="fas fa-bolt">⚡ Bolt</option>
-                        <option value="fas fa-star">⭐ Star</option>
-                        <option value="fas fa-heart">❤️ Heart</option>
                         <option value="fab fa-whatsapp">💬 WhatsApp</option>
                         <option value="fab fa-youtube">▶️ YouTube</option>
                         <option value="fab fa-instagram">📸 Instagram</option>
                         <option value="fab fa-tiktok">🎵 TikTok</option>
                     </select>
                 </div>
-                
-                <div>
-                    <label for="portal-description" class="font-cinzel gold-text" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Description</label>
-                    <textarea id="portal-description" rows="2" style="width: 100%; padding: 0.75rem; border-radius: 8px; font-size: 1rem; resize: vertical;" placeholder="Brief description..."></textarea>
+                <div style="margin-bottom: 0.75rem;">
+                    <label for="portal-description" class="font-cinzel gold-text" style="font-size: 0.7rem; display: block; margin-bottom: 0.25rem;">Description</label>
+                    <textarea id="portal-description" rows="2" placeholder="Brief description..." style="resize: vertical;"></textarea>
                 </div>
-
-                <div>
-                    <label class="font-cinzel gold-text" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Portal Theme</label>
+                <div style="margin-bottom: 0.75rem;">
+                    <label class="font-cinzel gold-text" style="font-size: 0.7rem; display: block; margin-bottom: 0.25rem;">Portal Theme</label>
                     <div style="display: flex; justify-content: space-around; padding-top: 0.5rem;">
-                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; padding: 0.5rem; border-radius: 8px; transition: all 0.3s;">
-                            <input type="radio" name="portal-color" value="#ff7a18" style="width: 1.25rem; height: 1.25rem; accent-color: var(--lava-orange);" checked>
-                            <span class="font-cinzel" style="font-weight: 700; color: var(--lava-orange);">Lava</span>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                            <input type="radio" name="portal-color" value="#ff7a18" checked> <span class="font-cinzel" style="color: var(--lava-orange); font-size: 0.8rem;">Lava</span>
                         </label>
-                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; padding: 0.5rem; border-radius: 8px; transition: all 0.3s;">
-                            <input type="radio" name="portal-color" value="#d62828" style="width: 1.25rem; height: 1.25rem; accent-color: var(--flame-red);">
-                            <span class="font-cinzel" style="font-weight: 700; color: var(--flame-red);">Flame</span>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                            <input type="radio" name="portal-color" value="#d62828"> <span class="font-cinzel" style="color: var(--flame-red); font-size: 0.8rem;">Flame</span>
                         </label>
-                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; padding: 0.5rem; border-radius: 8px; transition: all 0.3s;">
-                            <input type="radio" name="portal-color" value="#fcbf49" style="width: 1.25rem; height: 1.25rem; accent-color: var(--gold);">
-                            <span class="font-cinzel" style="font-weight: 700; color: var(--gold);">Gold</span>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                            <input type="radio" name="portal-color" value="#fcbf49"> <span class="font-cinzel" style="color: var(--gold); font-size: 0.8rem;">Gold</span>
                         </label>
                     </div>
                 </div>
-
-                <div style="display: flex; justify-content: flex-end; gap: 0.75rem; padding-top: 0.5rem;">
-                    <!-- DIUBAH: onclick diperbarui untuk menggunakan style.display = 'none' -->
-                    <button type="button" onclick="document.getElementById('add-portal-modal').style.display = 'none'" class="btn-secondary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
-                        Cancel
-                    </button>
-                    <button type="submit" class="btn-lava" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
-                        Forge
-                    </button>
+                <div class="form-actions" style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+                    <button type="button" onclick="document.getElementById('add-portal-modal').style.display = 'none'" class="btn-secondary">Cancel</button>
+                    <button type="submit" class="btn-lava">Forge</button>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <!-- Password Unlock Modal -->
+    <div id="password-modal" class="fixed inset-0 flex items-center justify-center z-50 hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 55;">
+        <div class="modal-content" style="text-align: center;">
+            <div style="font-size: 2.5rem; color: var(--gold); margin-bottom: 0.5rem;">
+                <i class="fas fa-lock"></i>
+            </div>
+            <h2 class="font-cinzel gold-text">Portal Locked</h2>
+            <p style="margin-bottom: 1rem; font-size: 0.85rem; color: #ccc;">Portal ini dilindungi sandi. Masukkan password untuk melanjutkan.</p>
+            
+            <form onsubmit="event.preventDefault(); submitPassword();">
+                <input type="password" id="unlock-input" placeholder="Masukkan password..." style="text-align: center; margin-bottom: 1.5rem;" required>
+                <div class="form-actions" style="justify-content: center; display: flex; gap: 10px;">
+                    <button type="button" onclick="closePasswordModal()" class="btn-secondary">Batal</button>
+                    <button type="submit" class="btn-lava">Masuk</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- WhatsApp Link Modal -->
+    <div id="whatsapp-link-modal" class="fixed inset-0 flex items-center justify-center z-50 hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 55;">
+        <div class="modal-content">
+            <button onclick="document.getElementById('whatsapp-link-modal').style.display = 'none'" style="position: absolute; top: 0.8rem; right: 0.8rem; background: none; border: none; color: white; cursor: pointer;">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="font-cinzel gold-text">Generate WhatsApp Link</h2>
+            <form id="wa-form" onsubmit="event.preventDefault(); generateWhatsAppLink();">
+                <div style="margin-bottom: 0.75rem;">
+                    <label class="font-cinzel gold-text" style="font-size: 0.7rem; display: block; margin-bottom: 0.25rem;">Nomor WhatsApp</label>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <select id="wa-country-code" style="width: 35%; min-width: 100px;">
+                            <!-- Populated via JS -->
+                        </select>
+                        <input type="tel" id="wa-number" placeholder="8123456789" style="flex-grow: 1;" required>
+                    </div>
+                </div>
+                <div style="margin-bottom: 0.75rem;">
+                    <label for="wa-message" class="font-cinzel gold-text" style="font-size: 0.7rem; display: block; margin-bottom: 0.25rem;">Pesan</label>
+                    <textarea id="wa-message" rows="3" placeholder="Halo, saya ingin memesan..." style="resize: vertical;"></textarea>
+                </div>
+                <div class="form-actions" style="margin-top: 1rem;">
+                    <button type="submit" class="btn-lava" style="width: 100%;">🚀 Generate Link</button>
+                </div>
+            </form>
+            <!-- Result Section -->
+            <div id="wa-result-container" class="hidden-content" style="margin-top: 1.5rem; border-top: 1px solid #333; padding-top: 1rem;">
+                <label class="font-cinzel gold-text" style="font-size: 0.8rem;">Link Result</label>
+                <input type="text" id="wa-result-link" readonly style="background: rgba(0, 0, 0, 0.3); color: var(--gold); border: 1px solid var(--gold); margin-bottom: 0.75rem;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                    <button onclick="copyWaLink()" class="btn-secondary" style="font-size: 0.75rem; padding: 0.5rem;"><i class="fas fa-copy"></i> Copy Link</button>
+                    <button onclick="openWaLink()" class="btn-lava" style="font-size: 0.75rem; padding: 0.5rem;"><i class="fab fa-whatsapp"></i> Buka WA</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Smart Link Modal -->
+    <div id="smart-link-modal" class="fixed inset-0 flex items-center justify-center z-50 hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 55;">
+        <div class="modal-content">
+            <button onclick="document.getElementById('smart-link-modal').style.display = 'none'" style="position: absolute; top: 0.8rem; right: 0.8rem; background: none; border: none; color: white; cursor: pointer;">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="font-cinzel gold-text">Smart Link Siap <span style="display:inline-block; margin-left: 0.1em;">🚀</span></h2>
+            <p style="margin-bottom: 1.5rem; font-size: 0.85rem; color: #ccc;">Link ini sudah berisi semua portal kamu.</p>
+
+            <!-- Capacity Indicator -->
+            <div id="capacity-container" style="margin-bottom: 2.5rem; background: rgba(0,0,0,0.25); padding: 1.25rem 1.5rem; border-radius: 12px; border: 1px solid #333;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                    <span style="font-family: 'Cinzel', serif; font-weight: 700; font-size: 0.9rem; color: var(--gold); letter-spacing: 0.05em;">Kapasitas Data</span>
+                    <span id="capacity-text" style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.85rem; color: #ccc;">0%</span>
+                </div>
+                <div style="width: 100%; height: 8px; background: #333; border-radius: 4px; overflow: hidden; margin-bottom: 0.5rem;">
+                    <div id="capacity-bar" style="width: 0%; height: 100%; background: var(--success-green); transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1), background 0.6s ease; border-radius: 4px;"></div>
+                </div>
+                <div style="display: flex; justify-content: flex-end; margin-top: 0.5rem;">
+                    <span id="capacity-detail" style="font-size: 0.75rem; color: #888; font-family: 'Inter', sans-serif; letter-spacing: 0.02em;">Menghitung...</span>
+                </div>
+            </div>
+            
+            <div class="modal-actions">
+                <!-- Link Section -->
+                <div style="width: 100%;">
+                    <button id="btn-show-link" onclick="revealLink()" class="reveal-btn">
+                        <i class="fas fa-eye"></i> Tampilkan Link
+                    </button>
+                    <div id="link-content" class="hidden-content">
+                        <input type="text" id="generated-smart-link" readonly style="background: rgba(0, 0, 0, 0.3); cursor: text; border: 1px solid var(--gold);">
+                        <div style="display: flex; justify-content: center; margin-top: 1rem;">
+                            <button onclick="copySmartLink()" class="btn-lava" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><i class="fas fa-copy"></i> Copy Smart Link</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- QR Section -->
+                <div style="width: 100%;">
+                    <button id="btn-show-qr" onclick="revealQR()" class="reveal-btn">
+                        <i class="fas fa-qrcode"></i> Tampilkan QR Code
+                    </button>
+                    
+                    <div id="qr-content" class="hidden-content">
+                        <div id="qr-wrapper">
+                            <div class="qr-frame">
+                                <canvas id="qr-canvas-display"></canvas>
+                            </div>
+                            <button onclick="downloadHighResQR()" class="btn-download-4k">
+                                <i class="fas fa-download"></i> Unduh QR 4K
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Limit Warning Modal -->
+    <div id="limit-warning-modal" class="fixed inset-0 flex items-center justify-center z-50 hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 60;">
+        <div class="modal-content" style="text-align: center;">
+            <div style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem;">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h2 class="font-cinzel flame-text" style="font-size: 1.4rem; margin-bottom: 1rem; font-weight: 700;">Kapasitas Maksimal ⚠️</h2>
+            <p style="margin-bottom: 1.5rem; font-size: 0.95rem; color: #ccc; line-height: 1.6;">
+                Data portal Anda telah mencapai batas ukuran optimal untuk QR Code.
+                <br><br>
+                <strong class="gold-text">Solusi:</strong> Gunakan URL Shortener untuk link yang panjang.
+            </p>
+            <div style="display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                <span class="shortener-badge">bit.ly</span>
+                <span class="shortener-badge">s.id</span>
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="document.getElementById('limit-warning-modal').style.display='none'" class="btn-lava">
+                    Mengerti & Perbaiki
+                </button>
+            </div>
         </div>
     </div>
 
@@ -246,14 +864,10 @@
     <div id="confirmation-modal" class="fixed inset-0 flex items-center justify-center hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 60;">
         <div class="modal-content" style="max-width: 28rem; width: 100%; margin: 0 1rem; position: relative; padding: 2rem; text-align: center;">
             <h2 class="font-cinzel flame-text" style="font-size: 1.25rem; margin-bottom: 1rem; font-weight: 700;">Confirm Action</h2>
-            <p id="confirmation-message" style="margin-bottom: 1.5rem; font-size: 1.125rem; color: rgba(252, 191, 73, 0.9);">Are you sure?</p>
+            <p id="confirmation-message" style="margin-bottom: 1.5rem; font-size: 1.125rem; color: #ccc;">Are you sure?</p>
             <div style="display: flex; justify-content: center; gap: 1rem;">
-                <button id="confirm-cancel-btn" class="btn-secondary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
-                    Cancel
-                </button>
-                <button id="confirm-ok-btn" class="btn-lava" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
-                    Confirm
-                </button>
+                <button id="confirm-cancel-btn" class="btn-secondary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Cancel</button>
+                <button id="confirm-ok-btn" class="btn-lava" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Confirm</button>
             </div>
         </div>
     </div>
@@ -261,7 +875,593 @@
     <input type="file" id="import-file-input" class="hidden" style="display: none;" accept=".zip,.txt,application/json">
 
     <script>
-        const _0x2438b7=_0x3a34;(function(_0x5f3861,_0x3d7b1a){const _0x1192f6=_0x3a34,_0x115b5d=_0x5f3861();while(!![]){try{const _0x53ba72=-parseInt(_0x1192f6(0x1c3))/0x1+parseInt(_0x1192f6(0x262))/0x2*(-parseInt(_0x1192f6(0x252))/0x3)+-parseInt(_0x1192f6(0x203))/0x4+-parseInt(_0x1192f6(0x234))/0x5+-parseInt(_0x1192f6(0x230))/0x6*(parseInt(_0x1192f6(0x227))/0x7)+parseInt(_0x1192f6(0x1d6))/0x8*(-parseInt(_0x1192f6(0x207))/0x9)+parseInt(_0x1192f6(0x20c))/0xa;if(_0x53ba72===_0x3d7b1a)break;else _0x115b5d['push'](_0x115b5d['shift']());}catch(_0x167a9c){_0x115b5d['push'](_0x115b5d['shift']());}}}(_0x2798,0x58ec4));const _0x438786=(function(){let _0x1f7049=!![];return function(_0x5970fd,_0x228300){const _0x1f8d2d=_0x1f7049?function(){const _0x5442a7=_0x3a34;if(_0x228300){const _0xd98c1c=_0x228300[_0x5442a7(0x1f7)](_0x5970fd,arguments);return _0x228300=null,_0xd98c1c;}}:function(){};return _0x1f7049=![],_0x1f8d2d;};}()),_0x496496=_0x438786(this,function(){const _0x58da06=_0x3a34;return _0x496496[_0x58da06(0x1e1)]()[_0x58da06(0x23d)](_0x58da06(0x1e7))[_0x58da06(0x1e1)]()[_0x58da06(0x21a)](_0x496496)[_0x58da06(0x23d)](_0x58da06(0x1e7));});_0x496496();function _0x3a34(_0x3c9e3a,_0x531268){const _0x411343=_0x2798();return _0x3a34=function(_0x29212a,_0xa1e3e1){_0x29212a=_0x29212a-0x1c3;let _0xff02ee=_0x411343[_0x29212a];return _0xff02ee;},_0x3a34(_0x3c9e3a,_0x531268);}const _0xa1e3e1=(function(){let _0xfc7a1=!![];return function(_0x4acb49,_0x329acf){const _0x323cfc=_0xfc7a1?function(){if(_0x329acf){const _0x545f2c=_0x329acf['apply'](_0x4acb49,arguments);return _0x329acf=null,_0x545f2c;}}:function(){};return _0xfc7a1=![],_0x323cfc;};}()),_0x29212a=_0xa1e3e1(this,function(){const _0x9a979c=_0x3a34;let _0x116baa;try{const _0x457fc1=Function(_0x9a979c(0x249)+_0x9a979c(0x1c4)+');');_0x116baa=_0x457fc1();}catch(_0x5eba61){_0x116baa=window;}const _0x8068ea=_0x116baa[_0x9a979c(0x1f3)]=_0x116baa[_0x9a979c(0x1f3)]||{},_0x57e380=[_0x9a979c(0x22d),'warn',_0x9a979c(0x200),_0x9a979c(0x208),_0x9a979c(0x1e6),'table','trace'];for(let _0x442bf3=0x0;_0x442bf3<_0x57e380[_0x9a979c(0x1c5)];_0x442bf3++){const _0x4ec0dc=_0xa1e3e1[_0x9a979c(0x21a)]['prototype']['bind'](_0xa1e3e1),_0x2fd97e=_0x57e380[_0x442bf3],_0x2c4561=_0x8068ea[_0x2fd97e]||_0x4ec0dc;_0x4ec0dc[_0x9a979c(0x215)]=_0xa1e3e1['bind'](_0xa1e3e1),_0x4ec0dc['toString']=_0x2c4561[_0x9a979c(0x1e1)][_0x9a979c(0x25b)](_0x2c4561),_0x8068ea[_0x2fd97e]=_0x4ec0dc;}});_0x29212a(),document[_0x2438b7(0x231)](_0x2438b7(0x20d),function(){const _0x5bf64a=_0x2438b7;let _0x9bb3d=![];const _0x4b6aa4=document['getElementById']('bg-video'),_0x3a28b9=document[_0x5bf64a(0x20a)](_0x5bf64a(0x1d1));if(_0x4b6aa4&&_0x3a28b9){const _0x23f47f=()=>{const _0x524f56=_0x5bf64a;_0x4b6aa4[_0x524f56(0x1e5)][_0x524f56(0x1d5)]='0',!document[_0x524f56(0x1d4)][_0x524f56(0x1ea)][_0x524f56(0x1e2)]('light-mode')&&(_0x3a28b9[_0x524f56(0x1e5)]['opacity']=_0x524f56(0x253)),_0x9bb3d=!![];},_0x2596cb=_0x386a20=>{const _0x2d7a20=_0x5bf64a;console[_0x2d7a20(0x208)](_0x2d7a20(0x1fc),_0x386a20),_0x23f47f();};_0x4b6aa4[_0x5bf64a(0x231)]('ended',_0x23f47f),_0x4b6aa4[_0x5bf64a(0x231)](_0x5bf64a(0x208),_0x2596cb);const _0x40d745=_0x4b6aa4[_0x5bf64a(0x1f1)]();_0x40d745!==undefined&&_0x40d745[_0x5bf64a(0x23a)](_0xb9fd15=>{const _0xf862af=_0x5bf64a;console[_0xf862af(0x25d)]('Autoplay\x20blocked:',_0xb9fd15),_0x23f47f();});}const _0x471946=document[_0x5bf64a(0x20a)](_0x5bf64a(0x1f0)),_0xbfd319=document['getElementById'](_0x5bf64a(0x255)),_0x2e9e5f=document[_0x5bf64a(0x20a)](_0x5bf64a(0x1c6)),_0x200612=document[_0x5bf64a(0x20a)](_0x5bf64a(0x22b)),_0x1d64b2=document['getElementById'](_0x5bf64a(0x233)),_0x37af07=document[_0x5bf64a(0x20a)](_0x5bf64a(0x1de)),_0x49f5ef=document['getElementById'](_0x5bf64a(0x1dc)),_0x55a77f=document[_0x5bf64a(0x20a)](_0x5bf64a(0x218)),_0x594432=document[_0x5bf64a(0x20a)](_0x5bf64a(0x21d)),_0x2ce1aa=document[_0x5bf64a(0x20a)]('confirmation-modal'),_0x423863=document[_0x5bf64a(0x20a)](_0x5bf64a(0x1e9)),_0x126f58=document['getElementById'](_0x5bf64a(0x1d9)),_0x34f58d=document['getElementById'](_0x5bf64a(0x22a));let _0x17a1be=[],_0x38c985=null;const _0x2f292b=[{'name':_0x5bf64a(0x25f),'url':_0x5bf64a(0x23e),'icon':'fas\x20fa-gem','color':'#fcbf49','description':_0x5bf64a(0x21f)},{'name':'Buy\x20Bane\x20Lord\x20Of\x20Scalding\x20Seas','url':'https://api.whatsapp.com/send/?phone=6287872521809&text=Halo%2C+saya+ingin+membeli+Kode+Website+MLBB+Bane+Skin+Lord+Of+Scalding+Seas+sebesar+Rp100.000.+Mohon+transfer+ke+DANA+087734421123+dan+kirimkan+bukti+pembayarannya.+Pesanan+akan+diproses+maksimal+1x24+jam.+Terima+kasih.&type=phone_number&app_absent=0','icon':'fas\x20fa-fire','color':_0x5bf64a(0x20f),'description':_0x5bf64a(0x254)}];function _0x24b417(){const _0x25afb6=_0x5bf64a;_0x17a1be=JSON['parse'](localStorage[_0x25afb6(0x1cd)]('portals'))||_0x2f292b,_0x302e63(),_0x1f5de0(),setInterval(_0x1f5de0,0x3e8),_0x471946['addEventListener'](_0x25afb6(0x1f8),()=>{const _0xbad12a=_0x25afb6;if(!_0x9bb3d){console[_0xbad12a(0x22d)](_0xbad12a(0x23f));return;}document[_0xbad12a(0x1d4)][_0xbad12a(0x1ea)]['toggle']('light-mode'),!document['body'][_0xbad12a(0x1ea)][_0xbad12a(0x1e2)](_0xbad12a(0x25e))&&_0x4b6aa4[_0xbad12a(0x1e5)][_0xbad12a(0x1d5)]==='0'&&(_0x3a28b9[_0xbad12a(0x1e5)]['opacity']='0.35');}),_0x200612['addEventListener'](_0x25afb6(0x1f8),()=>{const _0x592c32=_0x25afb6;_0x1d64b2['classList'][_0x592c32(0x251)](_0x592c32(0x1eb)),_0x37af07[_0x592c32(0x1ea)]['remove'](_0x592c32(0x1f9)),_0x37af07[_0x592c32(0x1e5)]['display']=_0x592c32(0x236),document['body']['style'][_0x592c32(0x259)]=_0x592c32(0x1f9);}),_0x37af07['addEventListener'](_0x25afb6(0x1f8),closeMobileMenu),_0x2e9e5f[_0x25afb6(0x231)](_0x25afb6(0x232),_0x5cab1b),_0x594432[_0x25afb6(0x231)](_0x25afb6(0x1ec),_0x29094a),_0x34f58d[_0x25afb6(0x231)](_0x25afb6(0x1f8),()=>{const _0x14815e=_0x25afb6;_0x2ce1aa[_0x14815e(0x1ea)][_0x14815e(0x251)](_0x14815e(0x1f9)),_0x2ce1aa[_0x14815e(0x1e5)][_0x14815e(0x222)]=_0x14815e(0x1df);}),_0x126f58[_0x25afb6(0x231)]('click',()=>{const _0x3bb9a4=_0x25afb6;typeof _0x38c985==='function'&&_0x38c985(),_0x2ce1aa[_0x3bb9a4(0x1ea)]['add']('hidden'),_0x2ce1aa['style'][_0x3bb9a4(0x222)]=_0x3bb9a4(0x1df),_0x38c985=null;}),window[_0x25afb6(0x231)](_0x25afb6(0x204),_0x58e279),_0x58e279();}function _0x58e279(){const _0x3898b0=_0x5bf64a,_0x5a9006=document[_0x3898b0(0x1e3)](_0x3898b0(0x1ca)),_0x5aaba0=document['querySelector']('.mobile-nav-toggle');if(window['innerWidth']>=0x300){if(_0x5a9006)_0x5a9006[_0x3898b0(0x1e5)][_0x3898b0(0x222)]=_0x3898b0(0x236);if(_0x5aaba0)_0x5aaba0[_0x3898b0(0x1e5)][_0x3898b0(0x222)]=_0x3898b0(0x1df);}else{if(_0x5a9006)_0x5a9006[_0x3898b0(0x1e5)]['display']=_0x3898b0(0x1df);if(_0x5aaba0)_0x5aaba0[_0x3898b0(0x1e5)][_0x3898b0(0x222)]=_0x3898b0(0x236);}}window[_0x5bf64a(0x1cf)]=function(){const _0x3b5e39=_0x5bf64a;_0x1d64b2[_0x3b5e39(0x1ea)][_0x3b5e39(0x224)](_0x3b5e39(0x1eb)),_0x37af07[_0x3b5e39(0x1ea)][_0x3b5e39(0x251)](_0x3b5e39(0x1f9)),_0x37af07[_0x3b5e39(0x1e5)]['display']='none',document[_0x3b5e39(0x1d4)][_0x3b5e39(0x1e5)][_0x3b5e39(0x259)]='';},window[_0x5bf64a(0x1d7)]=function(_0x522957,_0x104e62){const _0x32361c=_0x5bf64a;_0x423863['textContent']=_0x522957,_0x38c985=_0x104e62,_0x2ce1aa[_0x32361c(0x1ea)][_0x32361c(0x224)](_0x32361c(0x1f9)),_0x2ce1aa[_0x32361c(0x1e5)][_0x32361c(0x222)]='flex';};function _0x302e63(){const _0x33dbaa=_0x5bf64a;_0xbfd319[_0x33dbaa(0x1fa)]='',_0x17a1be['forEach']((_0x421d31,_0x58c88c)=>{const _0x3dfa19=_0x33dbaa,_0xff7c73=document[_0x3dfa19(0x22c)](_0x3dfa19(0x209));_0xff7c73[_0x3dfa19(0x1e5)]['height']=_0x3dfa19(0x1ee);const _0x51f6c7=_0x421d31[_0x3dfa19(0x240)]||_0x3dfa19(0x20f),_0x22e1eb=_0x3dfa19(0x1f4)+_0x51f6c7+_0x3dfa19(0x261)+_0x51f6c7+';',_0x2703c4=_0x3dfa19(0x1f4)+_0x51f6c7+_0x3dfa19(0x1c7)+_0x51f6c7+';';let _0x21825e=_0x421d31[_0x3dfa19(0x247)]||_0x3dfa19(0x23b);(!_0x421d31[_0x3dfa19(0x247)]||!_0x421d31['icon']['startsWith']('fa')&&!_0x421d31[_0x3dfa19(0x247)][_0x3dfa19(0x257)](_0x3dfa19(0x260))&&!_0x421d31[_0x3dfa19(0x247)][_0x3dfa19(0x257)](_0x3dfa19(0x1c9)))&&(_0x21825e=_0x3dfa19(0x23b));const _0x594b7e=_0x21825e[_0x3dfa19(0x257)]('data:image')||_0x21825e[_0x3dfa19(0x257)]('http')?_0x3dfa19(0x1f6)+_0x21825e+_0x3dfa19(0x1e0)+_0x421d31['name']+_0x3dfa19(0x243)+_0x2703c4+_0x3dfa19(0x206):_0x3dfa19(0x201)+_0x21825e+_0x3dfa19(0x24d)+_0x2703c4+_0x3dfa19(0x206),_0x17ada7=_0x421d31['description']?_0x421d31[_0x3dfa19(0x1db)]:_0x3dfa19(0x226);_0xff7c73[_0x3dfa19(0x1fa)]=_0x3dfa19(0x1fd)+_0x22e1eb+'\x20height:\x20100%;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22'+_0x421d31['url']+_0x3dfa19(0x20b)+_0x594b7e+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3\x20class=\x22font-cinzel\x22\x20style=\x22font-weight:\x20700;\x20text-transform:\x20uppercase;\x20letter-spacing:\x200.05em;\x20word-break:\x20break-word;\x20font-size:\x201.125rem;\x20margin-bottom:\x200.5rem;\x20'+_0x2703c4+'\x22>'+_0x421d31[_0x3dfa19(0x244)]+_0x3dfa19(0x1cb)+_0x17ada7+_0x3dfa19(0x1ff)+_0x421d31['name']+_0x3dfa19(0x248)+_0x58c88c+_0x3dfa19(0x216),_0xbfd319[_0x3dfa19(0x1e4)](_0xff7c73);});}function _0x5cab1b(_0x58ec76){const _0x335e76=_0x5bf64a;_0x58ec76[_0x335e76(0x258)]();const _0x4add9c=document[_0x335e76(0x20a)]('portal-name')[_0x335e76(0x1cc)],_0x391503=document['getElementById'](_0x335e76(0x214))[_0x335e76(0x1cc)]||'#',_0x1e6bea=document[_0x335e76(0x20a)](_0x335e76(0x1d2))[_0x335e76(0x1cc)]||'',_0x52a4a0=document['getElementById'](_0x335e76(0x22f))['value'],_0x54618c=document[_0x335e76(0x1e3)](_0x335e76(0x25a))['value'];_0x28e9e1(_0x4add9c,_0x391503,_0x52a4a0,_0x54618c,_0x1e6bea);}function _0x28e9e1(_0x3869ed,_0x1bc0fd,_0x8167ca,_0x4e1a38,_0x3d4373){const _0x26e42d=_0x5bf64a;_0x17a1be[_0x26e42d(0x235)]({'name':_0x3869ed,'url':_0x1bc0fd,'icon':_0x8167ca,'color':_0x4e1a38,'description':_0x3d4373}),_0x1cf5dc(),_0x302e63(),document[_0x26e42d(0x20a)](_0x26e42d(0x24a))[_0x26e42d(0x1ea)][_0x26e42d(0x251)](_0x26e42d(0x1f9)),document[_0x26e42d(0x20a)](_0x26e42d(0x24a))[_0x26e42d(0x1e5)][_0x26e42d(0x222)]='none',_0x706a59();}window[_0x5bf64a(0x221)]=function(_0x275ea0){const _0x39611d=_0x5bf64a;_0x17a1be[_0x39611d(0x228)](_0x275ea0,0x1),_0x1cf5dc(),_0x302e63();};function _0x706a59(){const _0x3c5f9f=_0x5bf64a;_0x2e9e5f[_0x3c5f9f(0x213)]();}function _0x1cf5dc(){const _0x4d6267=_0x5bf64a;localStorage[_0x4d6267(0x1da)]('portals',JSON[_0x4d6267(0x225)](_0x17a1be));}window[_0x5bf64a(0x205)]=function(){const _0x2360d4=_0x5bf64a;document['getElementById'](_0x2360d4(0x24a))[_0x2360d4(0x1ea)]['remove'](_0x2360d4(0x1f9)),document['getElementById'](_0x2360d4(0x24a))[_0x2360d4(0x1e5)][_0x2360d4(0x222)]='flex',_0x706a59(),_0x1d64b2['classList'][_0x2360d4(0x1e2)]('open')&&closeMobileMenu();};function _0x1f5de0(){const _0x1b5781=_0x5bf64a,_0x2ff172=new Date();_0x49f5ef['textContent']=_0x2ff172[_0x1b5781(0x256)](_0x1b5781(0x22e)),_0x55a77f[_0x1b5781(0x1f2)]=_0x2ff172[_0x1b5781(0x241)](_0x1b5781(0x20e),{'weekday':'long','year':_0x1b5781(0x250),'month':_0x1b5781(0x25c),'day':_0x1b5781(0x250)});}window[_0x5bf64a(0x23c)]=function(){const _0x28470c=_0x5bf64a;localStorage[_0x28470c(0x21b)]('portals'),location[_0x28470c(0x245)]();},window['backupData']=async()=>{const _0x304532=_0x5bf64a,_0x38ee11={'portals':JSON[_0x304532(0x237)](localStorage['getItem'](_0x304532(0x238)))||_0x2f292b},_0x23b267=JSON[_0x304532(0x225)](_0x38ee11,null,0x2);try{const _0x1c817d=new JSZip();_0x1c817d['file'](_0x304532(0x21c),_0x23b267);const _0x17db27=await _0x1c817d[_0x304532(0x1e8)]({'type':_0x304532(0x1ce),'compression':_0x304532(0x1c8)}),_0x71ca2e=URL[_0x304532(0x1ef)](_0x17db27),_0x5b2340=document[_0x304532(0x22c)]('a');_0x5b2340[_0x304532(0x1d3)]=_0x71ca2e,_0x5b2340['download']=_0x304532(0x246),document[_0x304532(0x1d4)][_0x304532(0x1e4)](_0x5b2340),_0x5b2340[_0x304532(0x1f8)](),document[_0x304532(0x1d4)][_0x304532(0x1d0)](_0x5b2340),URL[_0x304532(0x212)](_0x71ca2e);}catch(_0x331154){console[_0x304532(0x208)]('Error\x20creating\x20ZIP:',_0x331154),alert(_0x304532(0x1fb));}},window[_0x5bf64a(0x24c)]=()=>{_0x594432['click']();};async function _0x29094a(_0x3ac5c6){const _0x422a88=_0x5bf64a,_0x43d2fc=_0x3ac5c6['target']['files'][0x0];if(!_0x43d2fc)return;if(_0x43d2fc[_0x422a88(0x219)]===_0x422a88(0x1f5)||_0x43d2fc[_0x422a88(0x244)]['endsWith'](_0x422a88(0x229))){const _0x5d54e9=new FileReader();_0x5d54e9[_0x422a88(0x1d8)]=async _0x5d403c=>{const _0x4edf27=_0x422a88;try{const _0x3bf4c2=await JSZip[_0x4edf27(0x211)](_0x5d403c[_0x4edf27(0x223)][_0x4edf27(0x1fe)]),_0x2050d7=_0x3bf4c2[_0x4edf27(0x1ed)](_0x4edf27(0x21c));if(_0x2050d7){const _0x1991c4=await _0x2050d7[_0x4edf27(0x24b)]('string');await _0x228cfc(_0x1991c4);}else alert('Invalid\x20ZIP\x20file.');}catch(_0x1cacfa){console['error']('Error\x20reading\x20ZIP:',_0x1cacfa),alert('Failed\x20to\x20read\x20ZIP\x20file.');}},_0x5d54e9[_0x422a88(0x242)](_0x43d2fc);}else{if(_0x43d2fc[_0x422a88(0x219)]===_0x422a88(0x21e)||_0x43d2fc[_0x422a88(0x219)]==='application/json'||_0x43d2fc[_0x422a88(0x244)]['endsWith'](_0x422a88(0x220))){const _0x31e895=new FileReader();_0x31e895[_0x422a88(0x1d8)]=async _0x3e7c08=>{const _0x93443f=_0x422a88;await _0x228cfc(_0x3e7c08[_0x93443f(0x223)][_0x93443f(0x1fe)]);},_0x31e895[_0x422a88(0x217)](_0x43d2fc);}else alert(_0x422a88(0x24f));}_0x3ac5c6[_0x422a88(0x223)][_0x422a88(0x1cc)]='';}async function _0x228cfc(_0x11572f){const _0x457e51=_0x5bf64a;try{const _0x31d4a8=JSON[_0x457e51(0x237)](_0x11572f);_0x31d4a8&&Array[_0x457e51(0x1dd)](_0x31d4a8[_0x457e51(0x238)])?(localStorage[_0x457e51(0x1da)](_0x457e51(0x238),JSON[_0x457e51(0x225)](_0x31d4a8[_0x457e51(0x238)])),showConfirmationModal(_0x457e51(0x24e),()=>{const _0x57730e=_0x457e51;location[_0x57730e(0x245)]();})):alert(_0x457e51(0x239));}catch(_0x1ec543){console[_0x457e51(0x208)](_0x457e51(0x210),_0x1ec543),alert(_0x457e51(0x202));}}_0x24b417();});function _0x2798(){const _0x482599=['))\x22\x20class=\x22delete-btn\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fas\x20fa-times\x22\x20style=\x22font-size:\x200.875rem;\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','readAsText','date','type','constructor','removeItem','uranusfazry_backup.json','import-file-input','text/plain','Upgrade\x20sekarang\x20—\x20akses\x20semua\x20website\x20uranus\x20tanpa\x20iklan\x20cuma\x20Rp25K','.txt','deletePortalAction','display','target','remove','stringify','&nbsp;','7jLWSII','splice','.zip','confirm-cancel-btn','mobile-menu-button','createElement','log','en-GB','portal-icon','666804Sdisfq','addEventListener','submit','mobile-menu','726555aRtlqN','push','block','parse','portals','Invalid\x20backup\x20format.','catch','fas\x20fa-fire','resetAllSettings','search','https://api.whatsapp.com/send/?phone=6287872521809&text=Halo%2C+saya+ingin+membeli+Akses+Website+Premium+Tanpa+Iklan+sebesar+Rp25.000.+Mohon+transfer+ke+DANA+087734421123+dan+kirimkan+bukti+pembayarannya.+Pesanan+akan+diproses+maksimal+1x24+jam.+Terima+kasih.&type=phone_number&app_absent=0','Light\x20mode\x20locked\x20until\x20video\x20ends.','color','toLocaleDateString','readAsArrayBuffer','\x20icon\x22\x20onerror=\x22this.style.display=\x27none\x27;\x20this.nextSibling.style.display=\x27block\x27;\x22><i\x20class=\x22fas\x20fa-fire\x22\x20style=\x22font-size:\x203rem;\x20margin-bottom:\x201rem;\x20display:\x20none;\x20','name','reload','uranusfazry_backup.zip','icon','?\x27,\x20()\x20=>\x20deletePortalAction(','return\x20(function()\x20','add-portal-modal','async','importData','\x22\x20style=\x22font-size:\x203rem;\x20margin-bottom:\x201rem;\x20','Data\x20imported.\x20Page\x20will\x20reload.','Unsupported\x20file\x20type.','numeric','add','6GCZyEo','0.35','Beli\x20kode\x20website\x20MLBB\x20Bane\x20Lord\x20Of\x20Scalding\x20Seas\x20edisi\x20premium\x20seharga\x20Rp100K','portals-grid','toLocaleTimeString','startsWith','preventDefault','overflow','input[name=\x22portal-color\x22]:checked','bind','long','warn','light-mode','Bane\x20Premium\x20Access','http',';\x20border-color:\x20','169380TCBdbu','607820OpiSDa','{}.constructor(\x22return\x20this\x22)(\x20)','length','portal-form',';\x20text-shadow:\x200\x200\x2015px\x20','DEFLATE','data:image','.desktop-nav','</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20style=\x22font-size:\x200.875rem;\x20color:\x20rgba(252,\x20191,\x2073,\x200.8);\x20margin-top:\x200.5rem;\x20line-height:\x201.4;\x22>','value','getItem','blob','closeMobileMenu','removeChild','bg-image','portal-description','href','body','opacity','1335736PWaqKE','showConfirmationModal','onload','confirm-ok-btn','setItem','description','time','isArray','mobile-menu-overlay','none','\x22\x20style=\x22margin:\x200\x20auto\x201rem;\x20height:\x203rem;\x20width:\x203rem;\x20object-fit:\x20contain;\x22\x20alt=\x22','toString','contains','querySelector','appendChild','style','exception','(((.+)+)+)+$','generateAsync','confirmation-message','classList','open','change','file','100%','createObjectURL','logo-container','play','textContent','console','color:\x20','application/zip','<img\x20src=\x22','apply','click','hidden','innerHTML','Backup\x20failed.','Video\x20background\x20failed:','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22portal-card\x22\x20style=\x22','result','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20onclick=\x22event.preventDefault();\x20event.stopPropagation();\x20showConfirmationModal(\x27Destroy\x20portal\x20','info','<i\x20class=\x22','Failed\x20to\x20parse\x20backup\x20file.','881132TQvpxe','resize','showAddLinkModal','\x22></i>','36VQrlNk','error','div','getElementById','\x22\x20target=\x22_blank\x22\x20style=\x22display:\x20block;\x20height:\x20100%;\x20padding:\x201.5rem;\x20text-align:\x20center;\x20position:\x20relative;\x20text-decoration:\x20none;\x20color:\x20inherit;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22position:\x20relative;\x20z-index:\x2010;\x20display:\x20flex;\x20flex-direction:\x20column;\x20align-items:\x20center;\x20justify-content:\x20center;\x20height:\x20100%;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','22860240jFtWiU','DOMContentLoaded','id-ID','#ff7a18','Error\x20parsing\x20backup:','loadAsync','revokeObjectURL','reset','portal-url','__proto__'];_0x2798=function(){return _0x482599;};return _0x2798();}
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- KONFIGURASI BATAS DATA ---
+            const MAX_QR_LENGTH = 2900; 
+
+            // --- VIDEO BACKGROUND LOGIC ---
+            let isVideoFinished = false;
+            const bgVideo = document.getElementById('bg-video');
+            const bgImage = document.getElementById('bg-image');
+
+            if (bgVideo && bgImage) {
+                const handleVideoEnd = () => {
+                    bgVideo.style.opacity = '0';
+                    if (!document.body.classList.contains('light-mode')) {
+                        bgImage.style.opacity = '0.35';
+                    }
+                    isVideoFinished = true;
+                };
+
+                const handleVideoError = (e) => {
+                    console.error("Video background failed:", e);
+                    handleVideoEnd();
+                };
+                
+                bgVideo.addEventListener('ended', handleVideoEnd);
+                bgVideo.addEventListener('error', handleVideoError);
+
+                const playPromise = bgVideo.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.warn("Autoplay blocked:", error);
+                        handleVideoEnd();
+                    });
+                }
+            }
+
+            // --- DOM ELEMENTS ---
+            const logoContainer = document.getElementById('logo-container');
+            const portalsGrid = document.getElementById('portals-grid');
+            const portalForm = document.getElementById('portal-form');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const timeDisplay = document.getElementById('time');
+            const dateDisplay = document.getElementById('date');
+            const importFileInput = document.getElementById('import-file-input');
+            const confirmationModal = document.getElementById('confirmation-modal');
+            const confirmationMessage = document.getElementById('confirmation-message');
+            const confirmOkBtn = document.getElementById('confirm-ok-btn');
+            const confirmCancelBtn = document.getElementById('confirm-cancel-btn');
+            const notifContainer = document.getElementById('notif-container');
+
+            let portals = [];
+            let onConfirmCallback = null;
+            let currentGeneratedUrl = "";
+
+            // --- PROFESSIONAL NOTIFICATION SYSTEM ---
+            window.showNotification = function(title, message, type = 'success') {
+                const toast = document.createElement('div');
+                toast.className = `notif-toast ${type}`;
+                
+                const iconClass = type === 'success' ? 'fa-check' : 'fa-exclamation-triangle';
+                
+                toast.innerHTML = `
+                    <div class="notif-icon"><i class="fas ${iconClass}"></i></div>
+                    <div class="notif-content">
+                        <h4 class="notif-title">${title}</h4>
+                        <p class="notif-message">${message}</p>
+                    </div>
+                    <button class="notif-close" onclick="this.parentElement.remove()">&times;</button>
+                    <div class="notif-progress"></div>
+                `;
+
+                notifContainer.appendChild(toast);
+                requestAnimationFrame(() => { toast.classList.add('show'); });
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    toast.addEventListener('transitionend', () => { if (toast.parentElement) toast.remove(); });
+                }, 4000);
+            };
+
+            // --- V5 COMPRESSION ENGINE ---
+            const SEP_ITEM = '\x01';
+            const SEP_FIELD = '\x02';
+            const TOKEN_MAP = [["https://api.whatsapp.com/send/?phone=", "*w"], ["https://", "*h"], ["http://", "*H"], [".com", "*c"], [".vercel.app", "*v"], ["&text=", "*t"], ["%20", "*s"], ["fas fa-", "*f"], ["fab fa-", "*b"], ["#ce00a7", "*1"], ["#4a0072", "*2"], ["#00c8e0", "*3"], [" ", "_"]];
+            const UrlManager = {
+                tokenize(str) { TOKEN_MAP.forEach(([from, to]) => { str = str.split(from).join(to); }); return str; },
+                detokenize(str) { [...TOKEN_MAP].reverse().forEach(([from, to]) => { str = str.split(to).join(from); }); return str; },
+                serialize(portals) { 
+                    return portals.map(p => { 
+                        return [p.name, p.url, p.icon, p.color, p.description || "", p.password || ""].join(SEP_FIELD); 
+                    }).join(SEP_ITEM); 
+                },
+                deserialize(str) { 
+                    if (!str) return []; 
+                    return str.split(SEP_ITEM).map(itemStr => { 
+                        const parts = itemStr.split(SEP_FIELD); 
+                        return { name: parts[0], url: parts[1], icon: parts[2], color: parts[3], description: parts[4] || "", password: parts[5] || null }; 
+                    }); 
+                },
+                encode(portals) { try { let raw = UrlManager.serialize(portals); raw = UrlManager.tokenize(raw); let compressed = LZString.compressToBase64(raw); return compressed.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); } catch (e) { console.error("Encode Error", e); return null; } },
+                decode(encoded) { try { let b64 = encoded.replace(/-/g, "+").replace(/_/g, "/"); while (b64.length % 4 !== 0) b64 += "="; let raw = LZString.decompressFromBase64(b64); if (!raw) return null; raw = UrlManager.detokenize(raw); return UrlManager.deserialize(raw); } catch (e) { console.error("Decode Error", e); return null; } },
+                load(payload) { if (payload.startsWith("v5_")) return UrlManager.decode(payload.slice(3)); if (payload.startsWith("v4:") || payload.startsWith("id:")) { window.showNotification('Format Lama', 'Terdeteksi link versi lama.', 'error'); return null; } const legacy = LZString.decompressFromEncodedURIComponent(payload); if (legacy && legacy.startsWith("[")) return JSON.parse(legacy); return null; }
+            };
+
+            const defaultPortals = [
+                { 
+                    name: 'Bane Premium Access', 
+                    url: 'https://api.whatsapp.com/send/?phone=6287872521809&text=Halo%2C+saya+ingin+membeli+Akses+Website+Premium+Tanpa+Iklan+sebesar+Rp25.000.+Mohon+transfer+ke+DANA+087734421123+dan+kirimkan+bukti+pembayarannya.+Pesanan+akan+diproses+maksimal+1x24+jam.+Terima+kasih.&type=phone_number&app_absent=0', 
+                    icon: 'fas fa-gem', 
+                    color: '#fcbf49', 
+                    description: 'Upgrade sekarang — akses semua website uranus tanpa iklan cuma Rp25K' 
+                },
+                { 
+                    name: 'Buy Bane Lord Of Scalding Seas', 
+                    url: 'https://api.whatsapp.com/send/?phone=6287872521809&text=Halo%2C+saya+ingin+membeli+Kode+Website+MLBB+Bane+Skin+Lord+Of+Scalding+Seas+sebesar+Rp100.000.+Mohon+transfer+ke+DANA+087734421123+dan+kirimkan+bukti+pembayarannya.+Pesanan+akan+diproses+maksimal+1x24+jam.+Terima+kasih.&type=phone_number&app_absent=0', 
+                    icon: 'fas fa-fire', 
+                    color: '#ff7a18', 
+                    description: 'Beli kode website MLBB Bane Lord Of Scalding Seas edisi premium seharga Rp100K' 
+                }
+            ];
+
+            // --- APP INITIALIZATION ---
+            function initPortalApp() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const encodedData = urlParams.get('p');
+                if (encodedData) {
+                    const decodedPortals = UrlManager.load(encodedData);
+                    if (decodedPortals) {
+                        portals = decodedPortals;
+                        localStorage.setItem('portals', JSON.stringify(portals));
+                        window.history.replaceState({}, document.title, window.location.pathname);
+                        renderPortals();
+                        window.showNotification('Data Loaded', 'Portal berhasil dimuat dari link.', 'success');
+                    } else loadFromStorage();
+                } else loadFromStorage();
+                
+                setupEventListeners();
+                updateNavDisplay();
+                populateCountries();
+                updateTime();
+                setInterval(updateTime, 1000);
+            }
+
+            function loadFromStorage() {
+                portals = JSON.parse(localStorage.getItem('portals')) || defaultPortals;
+                renderPortals();
+            }
+
+            function setupEventListeners() {
+                logoContainer.addEventListener('click', () => {
+                    if (!isVideoFinished) return;
+                    document.body.classList.toggle('light-mode');
+                    if (!document.body.classList.contains('light-mode') && bgVideo.style.opacity === '0') bgImage.style.opacity = '0.35';
+                    const mode = document.body.classList.contains('light-mode') ? 'Light Mode' : 'Lord Mode';
+                    window.showNotification('Theme Changed', `Mode tampilan diubah ke ${mode}.`, 'success');
+                });
+                
+                mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.add('open'); mobileMenuOverlay.classList.remove('hidden'); mobileMenuOverlay.style.display = 'block'; document.body.style.overflow = 'hidden'; });
+                mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+                portalForm.addEventListener('submit', handlePortalFormSubmit);
+                importFileInput.addEventListener('change', handleFileImport);
+                confirmCancelBtn.addEventListener('click', () => { confirmationModal.classList.add('hidden'); confirmationModal.style.display = 'none'; });
+                confirmOkBtn.addEventListener('click', () => { if (typeof onConfirmCallback === 'function') onConfirmCallback(); confirmationModal.classList.add('hidden'); confirmationModal.style.display = 'none'; onConfirmCallback = null; });
+                window.addEventListener('resize', updateNavDisplay);
+            }
+
+            function updateNavDisplay() {
+                const desktopNav = document.querySelector('.desktop-nav');
+                const mobileToggle = document.querySelector('.mobile-nav-toggle');
+                if (window.innerWidth >= 768) { if (desktopNav) desktopNav.style.display = 'block'; if (mobileToggle) mobileToggle.style.display = 'none'; }
+                else { if (desktopNav) desktopNav.style.display = 'none'; if (mobileToggle) mobileToggle.style.display = 'block'; }
+            }
+
+            window.closeMobileMenu = function() {
+                mobileMenu.classList.remove('open'); mobileMenuOverlay.classList.add('hidden'); mobileMenuOverlay.style.display = 'none'; document.body.style.overflow = '';
+            }
+
+            window.showConfirmationModal = function(message, callback) {
+                confirmationMessage.textContent = message; onConfirmCallback = callback; confirmationModal.classList.remove('hidden'); confirmationModal.style.display = 'flex';
+            }
+
+            // --- PORTAL RENDERING & PASSWORD LOGIC ---
+            function renderPortals() {
+                portalsGrid.innerHTML = '';
+                portals.forEach((portal, index) => {
+                    const portalElement = document.createElement('div');
+                    portalElement.style.height = '100%';
+                    const portalColor = portal.color || '#ff7a18';
+                    const isLocked = portal.password && portal.password.trim() !== "";
+                    
+                    let iconClass = portal.icon || 'fas fa-fire';
+                    if (!portal.icon || (!portal.icon.startsWith('fa') && !portal.icon.startsWith('http') && !portal.icon.startsWith('data:image'))) iconClass = 'fas fa-fire';
+                    
+                    // Removed dynamic text-shadow injection
+                    const textStyle = `color: ${portalColor};`;
+                    const iconHtml = (iconClass.startsWith('data:image') || iconClass.startsWith('http'))
+                        ? `<img src="${iconClass}" style="margin: 0 auto 1rem; height: 3rem; width: 3rem; object-fit: contain;" alt="${portal.name} icon" onerror="this.style.display='none'; this.nextSibling.style.display='block';"><i class="fas fa-fire" style="font-size: 3rem; margin-bottom: 1rem; display: none; ${textStyle}"></i>`
+                        : `<i class="${iconClass}" style="font-size: 3rem; margin-bottom: 1rem; ${textStyle}"></i>`;
+                        
+                    const descriptionHtml = portal.description ? portal.description : '&nbsp;';
+                    const lockIconHtml = isLocked ? `<div class="lock-indicator"><i class="fas fa-lock"></i></div>` : '';
+                    
+                    const clickAction = `onclick="handlePortalClick(event, ${index})"`;
+                    
+                    portalElement.innerHTML = `
+                    <div class="portal-card" style="color: ${portalColor}; border-color: ${portalColor}; height: 100%;" ${clickAction}>
+                        ${lockIconHtml}
+                        <div style="display: block; height: 100%; padding: 1.5rem; text-align: center; position: relative; text-decoration: none; color: inherit;">
+                            <div style="position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+                                ${iconHtml}
+                                <h3 class="font-cinzel" style="font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; word-break: break-word; font-size: 1.125rem; margin-bottom: 0.5rem; ${textStyle}">${portal.name}</h3>
+                                <p style="font-size: 0.875rem; color: #ccc; margin-top: 0.5rem; line-height: 1.4;">${descriptionHtml}</p>
+                            </div>
+                            <button onclick="event.stopPropagation(); showConfirmationModal('Destroy portal ${portal.name}?', () => deletePortalAction(${index}))" class="delete-btn">
+                                <i class="fas fa-times" style="font-size: 0.875rem;"></i>
+                            </button>
+                        </div>
+                    </div>`;
+                    
+                    portalsGrid.appendChild(portalElement);
+                });
+            }
+
+            let currentUnlockIndex = -1;
+
+            window.handlePortalClick = function(event, index) {
+                event.preventDefault();
+                const portal = portals[index];
+                if (portal.password && portal.password.trim() !== "") {
+                    currentUnlockIndex = index;
+                    openPasswordModal();
+                } else {
+                    window.open(portal.url, '_blank');
+                }
+            }
+
+            window.openPasswordModal = function() {
+                const modal = document.getElementById('password-modal');
+                modal.classList.remove('hidden'); modal.style.display = 'flex';
+                document.getElementById('unlock-input').value = '';
+                document.getElementById('unlock-input').focus();
+            }
+
+            window.closePasswordModal = function() {
+                const modal = document.getElementById('password-modal');
+                modal.classList.add('hidden'); modal.style.display = 'none';
+                currentUnlockIndex = -1;
+            }
+
+            window.submitPassword = function() {
+                if (currentUnlockIndex === -1) return;
+                const input = document.getElementById('unlock-input').value;
+                const portal = portals[currentUnlockIndex];
+                if (btoa(input) === portal.password) {
+                    closePasswordModal();
+                    window.open(portal.url, '_blank');
+                } else {
+                    window.showNotification("Salah!", "Password tidak cocok. Coba lagi.", "error");
+                    const inputField = document.getElementById('unlock-input');
+                    inputField.style.borderColor = 'var(--error-red)';
+                    setTimeout(() => inputField.style.borderColor = '#444', 500);
+                }
+            }
+
+            function handlePortalFormSubmit(e) { 
+                e.preventDefault(); 
+                const name = document.getElementById('portal-name').value; 
+                const url = document.getElementById('portal-url').value || "#"; 
+                const description = document.getElementById('portal-description').value || ""; 
+                const icon = document.getElementById('portal-icon').value; 
+                const color = document.querySelector('input[name="portal-color"]:checked').value; 
+                
+                const passwordInput = document.getElementById('portal-password').value;
+                const password = passwordInput ? btoa(passwordInput) : ""; 
+
+                addPortalToArray(name, url, icon, color, description, password); 
+            }
+
+            function addPortalToArray(name, url, icon, color, description, password) { 
+                portals.push({ name, url, icon, color, description, password }); 
+                savePortals(); 
+                renderPortals(); 
+                document.getElementById('add-portal-modal').classList.add('hidden'); 
+                document.getElementById('add-portal-modal').style.display = 'none'; 
+                resetPortalForm(); 
+                window.showNotification('Success', 'Portal baru berhasil ditempa!', 'success'); 
+            }
+
+            window.deletePortalAction = function(index) { portals.splice(index, 1); savePortals(); renderPortals(); window.showNotification('Deleted', 'Portal berhasil dihapus.', 'success'); }
+            function resetPortalForm() { portalForm.reset(); }
+            function savePortals() { localStorage.setItem('portals', JSON.stringify(portals)); }
+            window.showAddLinkModal = function() { document.getElementById('add-portal-modal').classList.remove('hidden'); document.getElementById('add-portal-modal').style.display = 'flex'; resetPortalForm(); if (mobileMenu.classList.contains('open')) closeMobileMenu(); }
+            function updateTime() { const now = new Date(); timeDisplay.textContent = now.toLocaleTimeString('en-GB'); dateDisplay.textContent = now.toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }); }
+            window.resetAllSettings = function() { localStorage.removeItem('portals'); Object.keys(localStorage).forEach(key => { if (key.startsWith('sl_')) localStorage.removeItem(key); }); location.href = window.location.pathname; }
+
+            // --- TOGGLE REVEAL FUNCTIONS ---
+            window.revealLink = function() {
+                document.getElementById('btn-show-link').style.display = 'none';
+                document.getElementById('link-content').style.display = 'block';
+                document.getElementById('capacity-container').classList.add('hide-capacity');
+            }
+
+            window.revealQR = function() {
+                document.getElementById('btn-show-qr').style.display = 'none';
+                document.getElementById('qr-content').style.display = 'block';
+                document.getElementById('capacity-container').classList.add('hide-capacity');
+            }
+
+            // --- QR CODE GENERATION LOGIC ---
+            window.generateSmartLink = function() {
+                const portalData = localStorage.getItem('portals');
+                if (!portalData || JSON.parse(portalData).length === 0) {
+                    window.showNotification('Error', 'Tidak ada portal untuk di-generate.', 'error');
+                    return;
+                }
+
+                const inputField = document.getElementById('generated-smart-link');
+                const modal = document.getElementById('smart-link-modal');
+                const qrDisplayCanvas = document.getElementById('qr-canvas-display');
+                
+                document.getElementById('btn-show-link').style.display = 'flex';
+                document.getElementById('link-content').style.display = 'none';
+                document.getElementById('btn-show-qr').style.display = 'flex';
+                document.getElementById('qr-content').style.display = 'none';
+                document.getElementById('capacity-container').classList.remove('hide-capacity');
+
+                modal.classList.remove('hidden'); modal.style.display = 'flex';
+                inputField.value = "Generating...";
+
+                setTimeout(() => {
+                    const parsedPortals = JSON.parse(portalData);
+                    const encoded = UrlManager.encode(parsedPortals);
+                    
+                    if (encoded) {
+                        const finalParam = `v5_${encoded}`;
+                        if (finalParam.length > MAX_QR_LENGTH) {
+                            document.getElementById('smart-link-modal').style.display = 'none';
+                            document.getElementById('limit-warning-modal').classList.remove('hidden');
+                            document.getElementById('limit-warning-modal').style.display = 'flex';
+                            return;
+                        }
+
+                        // Capacity Logic
+                        const usedLength = finalParam.length;
+                        const percentage = Math.min(100, Math.round((usedLength / MAX_QR_LENGTH) * 100));
+                        const remaining = Math.max(0, MAX_QR_LENGTH - usedLength);
+                        
+                        const capBar = document.getElementById('capacity-bar');
+                        const capText = document.getElementById('capacity-text');
+                        const capDetail = document.getElementById('capacity-detail');
+                        
+                        capBar.style.width = percentage + "%";
+                        capText.textContent = percentage + "%";
+                        capDetail.textContent = `Sisa Karakter: ${remaining}`;
+                        
+                        if (percentage < 70) capBar.style.background = "var(--success-green)";
+                        else if (percentage < 90) capBar.style.background = "var(--warning-yellow)";
+                        else capBar.style.background = "var(--error-red)";
+
+                        const finalUrl = `${window.location.origin}${window.location.pathname}?p=${finalParam}`;
+                        inputField.value = finalUrl;
+                        currentGeneratedUrl = finalUrl; 
+                        renderCustomQR(qrDisplayCanvas, finalUrl, false); 
+                    } else {
+                        inputField.value = "Error generating link.";
+                        window.showNotification('Error', 'Gagal membuat Smart Link.', 'error');
+                    }
+                }, 100);
+            }
+
+            // --- MASTER QR RENDERER ---
+            function renderCustomQR(targetCanvas, textData, isHighQuality) {
+                const size = isHighQuality ? 3000 : 600;
+                const padding = size * 0.05; 
+                const cardWidth = size - (padding * 2);
+                const textSpace = size * 0.15; 
+                const cardHeight = cardWidth + textSpace;
+                
+                targetCanvas.width = size;
+                targetCanvas.height = size + (textSpace * 0.5); 
+                const ctx = targetCanvas.getContext('2d');
+
+                // 1. Draw Card
+                const qrX = padding;
+                const qrY = padding;
+                const cornerRadius = size * 0.05;
+
+                ctx.fillStyle = '#ffffff';
+                ctx.shadowColor = "rgba(0, 0, 0, 0.2)";
+                ctx.shadowBlur = size * 0.03;
+                ctx.shadowOffsetX = 0; ctx.shadowOffsetY = size * 0.01;
+                ctx.beginPath();
+                ctx.roundRect(qrX, qrY, cardWidth, cardHeight, cornerRadius);
+                ctx.fill();
+                ctx.shadowColor = "transparent";
+
+                // 2. Generate QR Matrix
+                const tempQrCanvas = document.createElement('canvas');
+                const qrMargin = cardWidth * 0.1;
+                const qrSize = cardWidth - (qrMargin * 2);
+                
+                new QRious({
+                    element: tempQrCanvas, value: textData, size: qrSize,
+                    level: 'H', backgroundAlpha: 0, foreground: '#000000' 
+                });
+
+                // 3. Draw QR
+                ctx.drawImage(tempQrCanvas, qrX + qrMargin, qrY + qrMargin);
+
+                // 4. Draw Logo
+                const logoUrl = "https://i.imghippo.com/files/EePl9866XxI.png";
+                const img = new Image();
+                img.crossOrigin = "Anonymous";
+                
+                img.onload = function() {
+                    const logoSize = qrSize * 0.18; 
+                    const centerX = qrX + qrMargin + (qrSize / 2);
+                    const centerY = qrY + qrMargin + (qrSize / 2);
+                    const logoX = centerX - (logoSize / 2);
+                    const logoY = centerY - (logoSize / 2);
+
+                    ctx.beginPath();
+                    ctx.arc(centerX, centerY, logoSize / 2, 0, 2 * Math.PI);
+                    ctx.fillStyle = '#ffffff';
+                    ctx.fill();
+
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.arc(centerX, centerY, logoSize/2, 0, 2 * Math.PI);
+                    ctx.clip();
+                    ctx.filter = 'grayscale(100%)'; 
+                    ctx.drawImage(img, logoX, logoY, logoSize, logoSize);
+                    ctx.restore();
+
+                    drawBottomText(ctx, size, qrY + cardWidth, textSpace);
+                    if (isHighQuality) saveHighRes(targetCanvas);
+                };
+
+                img.onerror = function() {
+                    drawBottomText(ctx, size, qrY + cardWidth, textSpace);
+                };
+                img.src = logoUrl;
+            }
+
+            function drawBottomText(ctx, canvasWidth, textStartY, textSpaceHeight) {
+                const fontSize = canvasWidth * 0.035; 
+                ctx.font = `600 ${fontSize}px 'Inter', sans-serif`; 
+                ctx.fillStyle = '#333333'; 
+                ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+                const textY = textStartY + (textSpaceHeight * 0.4);
+                ctx.fillText("SCAN UNTUK MASUK KE PORTAL BANE", canvasWidth / 2, textY);
+            }
+
+            function saveHighRes(canvas) {
+                try {
+                    const dataUrl = canvas.toDataURL('image/png');
+                    const link = document.createElement('a');
+                    link.download = 'Bane_Portal_QR.png';
+                    link.href = dataUrl;
+                    link.click();
+                    window.showNotification('Success', 'Download dimulai!', 'success');
+                } catch (e) {
+                    console.error(e);
+                    window.showNotification('Error', 'Gagal menyimpan gambar.', 'error');
+                }
+            }
+
+            window.downloadHighResQR = function() {
+                if (!currentGeneratedUrl) {
+                    window.showNotification('Error', 'Smart Link belum di-generate.', 'error');
+                    return;
+                }
+                window.showNotification('Processing', 'Memproses QR Code High-Res...', 'success');
+                const downloadCanvas = document.createElement('canvas');
+                renderCustomQR(downloadCanvas, currentGeneratedUrl, true);
+            }
+
+            window.copySmartLink = function() {
+                const inputField = document.getElementById('generated-smart-link');
+                inputField.select(); inputField.setSelectionRange(0, 99999);
+                navigator.clipboard.writeText(inputField.value).then(() => {
+                    window.showNotification('Berhasil!', 'Link berhasil disalin ke clipboard.', 'success');
+                }).catch(err => {
+                    window.showNotification('Gagal', 'Gagal menyalin link otomatis.', 'error');
+                });
+            }
+
+            window.backupData = async () => {
+                const dataToBackup = { portals: JSON.parse(localStorage.getItem('portals')) || defaultPortals };
+                const dataStr = JSON.stringify(dataToBackup, null, 2);
+                try {
+                    const zip = new JSZip();
+                    zip.file("uranusfazry_backup.json", dataStr);
+                    const content = await zip.generateAsync({ type: "blob", compression: "DEFLATE" });
+                    const url = URL.createObjectURL(content);
+                    const a = document.createElement('a');
+                    a.href = url; a.download = 'uranusfazry_backup.zip';
+                    document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
+                    window.showNotification('Backup Ready', 'File backup sedang didownload.', 'success');
+                } catch (error) { window.showNotification('Backup Error', 'Gagal membuat backup.', 'error'); }
+            };
+
+            window.importData = () => { importFileInput.click(); };
+
+            window.handleFileImport = async function(event) {
+                const file = event.target.files[0]; if (!file) return;
+                const reader = new FileReader();
+                reader.onload = async (e) => {
+                    try {
+                        let jsonContent;
+                        if (file.name.endsWith(".zip")) {
+                            const zip = await JSZip.loadAsync(e.target.result);
+                            jsonContent = await zip.file("uranusfazry_backup.json").async("string");
+                        } else { jsonContent = e.target.result; }
+                        const imported = JSON.parse(jsonContent);
+                        if (imported && Array.isArray(imported.portals)) {
+                            localStorage.setItem('portals', JSON.stringify(imported.portals));
+                            showConfirmationModal('Data imported. Page will reload.', () => location.reload());
+                        } else { window.showNotification('Import Error', 'Format file backup tidak valid.', 'error'); }
+                    } catch (error) { window.showNotification('Import Error', 'Gagal membaca file.', 'error'); }
+                };
+                if (file.name.endsWith(".zip")) reader.readAsArrayBuffer(file); else reader.readAsText(file);
+                event.target.value = '';
+            }
+
+            /* --- WHATSAPP GENERATOR LOGIC --- */
+            const countryGroups = [
+                { region: "🌏 ASIA", countries: [{ code: "62", name: "Indonesia" }, { code: "60", name: "Malaysia" }, { code: "65", name: "Singapore" }, { code: "63", name: "Philippines" }, { code: "66", name: "Thailand" }, { code: "84", name: "Vietnam" }, { code: "82", name: "South Korea" }, { code: "81", name: "Japan" }] },
+                { region: "🌍 EUROPE", countries: [{ code: "44", name: "UK" }, { code: "49", name: "Germany" }, { code: "33", name: "France" }, { code: "31", name: "Netherlands" }] },
+                { region: "🌎 AMERICA", countries: [{ code: "1", name: "USA/Canada" }, { code: "55", name: "Brazil" }] }
+            ];
+
+            function populateCountries() {
+                const select = document.getElementById('wa-country-code');
+                select.innerHTML = '';
+                countryGroups.forEach(group => {
+                    const optgroup = document.createElement('optgroup');
+                    optgroup.label = group.region;
+                    optgroup.style.color = "var(--gold)"; optgroup.style.backgroundColor = "#1b1b1b";
+                    group.countries.forEach(c => {
+                        const option = document.createElement('option');
+                        option.value = c.code; option.textContent = `+${c.code} (${c.name})`;
+                        option.style.color = "#fff"; optgroup.appendChild(option);
+                    });
+                    select.appendChild(optgroup);
+                });
+            }
+
+            window.showWhatsAppModal = function() {
+                document.getElementById('whatsapp-link-modal').style.display = 'flex';
+                document.getElementById('wa-form').reset();
+                document.getElementById('wa-result-container').style.display = 'none';
+                if(document.getElementById('wa-country-code').options.length === 0) populateCountries();
+                if (mobileMenu.classList.contains('open')) closeMobileMenu();
+            }
+
+            window.generateWhatsAppLink = function() {
+                const countryCode = document.getElementById('wa-country-code').value;
+                let numberInput = document.getElementById('wa-number').value;
+                const msgInput = document.getElementById('wa-message').value;
+                let cleanNum = numberInput.replace(/\D/g, ''); 
+
+                if (!countryCode || !cleanNum) { window.showNotification('Error', 'Data tidak lengkap.', 'error'); return; }
+                if (cleanNum.startsWith('0')) cleanNum = cleanNum.substring(1);
+                
+                const fullNumber = countryCode + cleanNum;
+                let waUrl = `https://wa.me/${fullNumber}`;
+                if (msgInput.trim().length > 0) waUrl += `?text=${encodeURIComponent(msgInput)}`;
+
+                document.getElementById('wa-result-link').value = waUrl;
+                document.getElementById('wa-result-container').style.display = 'block';
+                window.showNotification('Success', 'Link WhatsApp berhasil dibuat!', 'success');
+            }
+
+            window.copyWaLink = function() {
+                const copyText = document.getElementById("wa-result-link");
+                copyText.select(); copyText.setSelectionRange(0, 99999);
+                navigator.clipboard.writeText(copyText.value).then(() => window.showNotification('Copied', 'Link WhatsApp disalin.', 'success'));
+            }
+
+            window.openWaLink = function() {
+                const url = document.getElementById("wa-result-link").value;
+                if(url) window.open(url, '_blank');
+            }
+
+            initPortalApp();
+        });
     </script>
 
 </body>
